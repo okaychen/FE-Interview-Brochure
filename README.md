@@ -1,1 +1,3 @@
-# Front-end-Developer-Interview
+# 前端面试集锦
+
+19年秋招亲身面试经历,结合一些复习资料的综合整理
