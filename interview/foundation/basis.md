@@ -69,3 +69,17 @@ $data = array(
 echo $_GET['callback'].'('.json_encode($data).')';
 ```
 ### 2.4：（扩展）cors
+cors是一种现代浏览器支持跨域资源请求的一种方式，当使用XMLHttpRequest发送请求时，浏览器发现不符合同源策略，会给请求加一个请求头`Origin`,后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：`Access-Control-Allow-Origin`;浏览器判断该响应头是否包含`Origin`的值,如果有则浏览器会处理响应,我们就可以拿到响应数据，如果不包含浏览器会直接驳回，这时我们就无法拿到响应数据
+node处理
+```js
+if(req.headers.origin){
+    res.wirteHead(200,{
+        'Content-type':'text/html;charset=UTF-8',
+        'Access-Control-Allow-Origin':'http:localhost'/*,
+        'Access-Control-Allow-Methods':'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers':'X-Requested-With, Content-Type'*/
+    });
+    res.write('cors');
+    res.end();
+}
+```
