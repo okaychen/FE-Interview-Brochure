@@ -10,7 +10,7 @@
 
 [Q1：浏览器解析渲染页面过程](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q1浏览器解析渲染页面过程)
 
-- ### [Q1.1：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q11布局渲染的过程发生的回流和重绘区别减少回流次数的方法)
+- [Q1.1：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q11布局渲染的过程发生的回流和重绘区别减少回流次数的方法)
 
 #### CSS篇
 
