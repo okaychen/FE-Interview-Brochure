@@ -17,7 +17,7 @@
 #### JavaScript篇 
 [Q1：跨域的方式有哪些jsonp的原理以及服务端如何处理](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q1跨域的方式有哪些jsonp的原理以及服务端如何处理)
 
-- [Q1.1：为什么需要跨域](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q11为什么需要跨域)
+- [Q1.1：为什么需要跨域？同源策略拦截客户端请求还是服务器响应](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q11为什么需要跨域？同源策略拦截客户端请求还是服务器响应)
 
 - [Q1.2：跨域的方式有哪些](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q12跨域的方式有哪些)
 
