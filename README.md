@@ -13,7 +13,7 @@
 #### CSS篇
 
 #### JavaScript篇 
-[跨域的方式有哪些jsonp的原理以及服务端如何处理](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q1跨域的方式有哪些jsonp的原理以及服务端如何处理)
+[Q1：跨域的方式有哪些jsonp的原理以及服务端如何处理](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q1跨域的方式有哪些jsonp的原理以及服务端如何处理)
 
 <!-- break -->
 
