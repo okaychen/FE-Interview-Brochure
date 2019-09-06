@@ -16,6 +16,30 @@ A1.1：区别：
 - 4）不使用table布局，一个小的改动可能就会引起整个table重新布局
 - 5）在内存中多次操作节点，完成后在添加到文档中
 
+## Q2：关于transform开启GPU加速渲染
+
+>分析：页面性能优化有一条，用transform代替top，left来实现动画。那么transform的优势在哪里？如何开启GPU加速渲染？开启GPU硬件加速可能会触发的问题，如何解决？
+
+### Q2.1：相比top&left，transform的优势在哪里
+首先相比定位的top&left来说，transform不会引起整个页面的回流和重绘。其次我们可以通过transform开启GPU硬件加速，提高渲染速度，但相应的transform也会占用更多的内存。
+### Q2.2：transform如何开启GPU硬件加速
+```css
+.box{
+    transform:translateZ(0);
+    //或者
+    transfor:translate3d(0,0,0);
+}
+```
+### Q2.3：开启GPU硬件加速可能会触发哪些问题，如何处理？
+可能会导致浏览器频繁闪烁或者抖动，解决方案：
+```css
+.box{
+    backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+```
 # CSS篇
 
 # JavaScript篇
@@ -24,7 +48,7 @@ A1.1：区别：
 
 ## Q1：跨域的方式有哪些？jsonp的原理以及服务端如何处理
 
-> 分析:谈到跨域，首先想到的就是我们为什么需要跨域？要实现跨域，就要知道跨域的方式有哪些？你最常用那种方式跨域？原理是什么？浏览器端如何做？服务端又该如何处理？接下来逐一回答
+> 分析:谈到跨域，首先想到的就是我们为什么需要跨域？要实现跨域，就要知道跨域的方式有哪些？你最常用那种方式跨域？原理是什么？浏览器端如何做？服务端又该如何处理？
 ### Q1.1：为什么需要跨域？同源策略拦截客户端请求还是服务器响应？
 A1.1：之所以需要跨域，是因为浏览器同源策略的约束，面对不同源的请求，我们无法完成，这时候就需要用到跨域。同源策略拦截的是跨源请求，原因：CORS缺少`Access-Control-Allow-Origin`头
 ### Q1.2：跨域的方式有哪些
@@ -71,7 +95,7 @@ $data = array(
 echo $_GET['callback'].'('.json_encode($data).')';
 ```
 ### 1.5：（扩展）cors
-cors是一种现代浏览器支持跨域资源请求的一种方式，当使用XMLHttpRequest发送请求时，浏览器发现不符合同源策略，会给请求加一个请求头`Origin`,后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：`Access-Control-Allow-Origin`;浏览器判断该响应头是否包含`Origin`的值,如果有则浏览器会处理响应,我们就可以拿到响应数据，如果不包含浏览器会直接驳回，这时我们就无法拿到响应数据
+cors是一种现代浏览器支持跨域资源请求的一种方式，它允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制
 ```js
 //node处理
 if(req.headers.origin){
@@ -83,3 +107,26 @@ if(req.headers.origin){
     res.end();
 }
 ```
+## Q2：介绍ES6熟悉的几个新特性
+- let，const声明变量
+- 解构赋值
+- 箭头函数
+- 扩展运算符
+- 数组的新方法 -- map，reduce，filter
+- promise
+### Q2.1：var，let，const的区别
+首先var相对let/const，后者可以使用块级作用域，var声明变量则存在函数作用域内（该域内存在变量提升）。let/const有一个暂时性死区的概念，即进入作用域创建变量到变量可以开始访问的一段时间。
+
+其次let，const主要的区别在于：const一旦被赋值就不在改变了
+```js
+const name = 'Jack';
+name = 'Tom'  //TypeError:Assignment to constant
+```
+但值得注意的是：这并不意味着声明的变量本身不可变，只是说它不可再次被赋值了（const定义引用类型时，只要它的引用地址不发生改变，仍然可以改变它的属性）
+```js
+const person = {
+    name : 'Jack‘
+}
+person.name = 'Tom'
+```
+### Q2.2：解构赋值
