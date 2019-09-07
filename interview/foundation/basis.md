@@ -129,4 +129,3 @@ const person = {
 }
 person.name = 'Tom'
 ```
-### Q2.2：解构赋值
