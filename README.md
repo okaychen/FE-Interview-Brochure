@@ -1,11 +1,10 @@
-# 前端&后台面试整理
-19年秋招面试经历，结合一些复习资料的综合整理，前端包含基础篇、vue篇、构建工具篇、网络篇、安全篇、算法篇。
+# 前端面试整理
+2019年秋季校园招聘前端面试经历，结合一些复习资料的综合整理，包含基础篇、vue篇、构建工具篇、网络篇、安全篇、算法篇。
 ## 目录
 
 ### [基础篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md)
 
 #### HTML篇
-
 [Q1：浏览器解析渲染页面过程](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q1浏览器解析渲染页面过程)
 
 - [Q1.1：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#q11布局渲染的过程发生的回流和重绘区别减少回流次数的方法)
