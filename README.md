@@ -1,7 +1,6 @@
 # 前端&后台面试整理
-
 19年秋招面试经历，结合一些复习资料的综合整理，前端包含基础篇、vue篇、构建工具篇、网络篇、安全篇、算法篇。
-## 前端篇章目录
+## 目录
 
 ### [基础篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md)
 
@@ -49,13 +48,9 @@
 │   │   ├── network.md
 │   │   ├── security.md
 │   │   └── webpack.md
-│   ├── Backend
-│   │   ├── image
-│   │   └── MySQL.md
 │   ├── foundation
 │   │   ├── basis.md
 │   │   └── vue.md
 │   └── source.md
 └── README.md
-
 ```
