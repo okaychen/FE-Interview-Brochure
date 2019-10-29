@@ -132,3 +132,4 @@ const person = {
 }
 person.name = 'Tom'
 ```
+## Q3：高频率触发事件解决方案-防抖和节流
