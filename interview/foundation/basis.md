@@ -133,3 +133,50 @@ const person = {
 person.name = 'Tom'
 ```
 ## Q3：高频率触发事件解决方案-防抖和节流
+
+节流：在一段时间内不管触发了多少次都只认为触发了一次，等计时结束进行响应（假设设置的时间为2000ms，再触发了事件的2000ms之内，你在多少触发该事件，都不会有任何作用，它只为第一个事件等待2000ms。时间一到，它就会执行了。
+）
+```js
+//时间戳方式
+function throttle(fn,delay){
+    let pre = Date.now();
+    return function(){
+        let context = this;
+        let args = arguments;
+        let now = Date.now();
+        if(now - pre > delay){
+            fn.apply(context,args);
+            pre = Date.now();
+        }
+    }
+}
+//定时器方式
+function throttle(fn,delay){
+    let timer = null;
+    return function(){
+        let context = this;
+        let args = arguments;
+        if(!timer){
+            timer = setTimeout(function(){
+                fn.apply(context,args);
+                timer = null;
+            },delay)
+        }
+    }
+}
+```
+防抖：在某段时间内，不管你触发了多少次事件，都只认最后一次（假设设置时间为2000ms，如果触发事件的2000ms之内，你再次触发该事件，就会给新的事件添加新的计时器，之前的事件统统作废。只执行最后一次触发的事件。）
+```js
+//定时器方式
+function debounce(fn,delay){
+    let timer = null;
+    return function(){
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+            fn.apply(context,args);
+        },delay)
+    }
+}
+```
