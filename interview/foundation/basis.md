@@ -1,15 +1,15 @@
 ```html
-<!--html-->
+<!--HTMLl&CSS-->
 Q1：浏览器解析渲染页面的过程
     - Q1.1：布局渲染过程发生的回流和重绘的次数
 Q2：关于transform开启GPU加速渲染
     Q2.1：相比top&left，transform的优势在哪里
     Q2.2：transform如何开启GPU硬件加速
     Q2.3：开启GPU硬件加速可能会触发哪些问题，如何处理
-Q3：
-<!--css-->
-Q1：CSS定位的方式有哪些分别相对于谁
-Q2：
+Q3：Doctype是什么，三种模式有区别在什么地方
+Q4：两种盒模型
+Q5：关于IFC和BFC
+Q6：CSS定位的方式有哪些分别相对于谁
 <!--javascript-->
 Q1：跨域的方式有哪些？jsonp的原理以及服务端如何处理
     - Q1.1：为什么需要跨域，同源策略拦截客户端请求还是服务器响应
@@ -23,13 +23,13 @@ Q3：高频率触发事件解决方案-防抖和节流
 
 ```
 
-# HTML篇
+# HTML&CSS篇
 
 ## Q1：浏览器解析渲染页面过程
 
 A1：HTML解析构建DOM->CSS解析构建CSSOM树->根据DOM树和CSSOM树构建render树->根据render树进行布局渲染render layer->根据计算的布局信息进行绘制
 ### Q1.1：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法
-A1.1：区别：
+区别：
 - 回流指当前窗口发生改变，发生滚动操作，或者元素的位置大小相关属性被更新时会触发布局过程，发生在render树
 - 重绘指当前视觉样式属性被更新时触发的绘制过程，发生在渲染层render layer
 
@@ -64,9 +64,26 @@ A1.1：区别：
     -webkit-perspective: 1000;
 }
 ```
-# CSS篇
 
-## Q1：CSS定位的方式有哪些分别相对于谁
+### Q3：Doctype是什么，三种模式的区别在什么地方
+Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，用来规范文档使用哪种方式解析HTML，三种模式分别是怪异模式，标准模式，近乎模式(IE8的一种近乎于前两者之间的一种模式)；标准模式按照HTML和CSS定义渲染，怪异模式会模拟更旧的浏览器行为
+
+### Q4：两种盒模型
+标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin
+![](http://www.chenqaq.com/assets/images/box-model1.png)
+
+怪异盒模型，IE5.X 和 6 在怪异模式中使用自己的非标准模型，盒子的总宽度和高度是包含内边距padding和边框border宽度在内的：盒子总宽度/高度=width/height + margin = width/height + margin;
+![](http://www.chenqaq.com/assets/images/box-model2.png)
+```css
+box-sizing : content-box || border-box || inherit;
+```
+boxsizing属性content-box使用标准盒模型的计算方式，border-box则使用怪异盒模型的计算方式
+
+### Q5：关于IFC和BFC
+
+
+
+## Q6：CSS定位的方式有哪些分别相对于谁
 ```
 static(默认值)
 absolute(绝对定位)
@@ -79,17 +96,17 @@ relative(相对定位，相对于自身)
 
 > 分析:谈到跨域，首先想到的是我们为什么需要跨域？要实现跨域，就要知道跨域的方式有哪些？你最常用那种方式跨域？原理是什么？浏览器端如何做？服务端又该如何处理？
 ### Q1.1：为什么需要跨域，同源策略拦截客户端请求还是服务器响应
-A1.1：之所以需要跨域，是因为浏览器同源策略的约束，面对不同源的请求，我们无法完成，这时候就需要用到跨域。同源策略拦截的是跨源请求，原因：CORS缺少`Access-Control-Allow-Origin`头
+之所以需要跨域，是因为浏览器同源策略的约束，面对不同源的请求，我们无法完成，这时候就需要用到跨域。同源策略拦截的是跨源请求，原因：CORS缺少`Access-Control-Allow-Origin`头
 ### Q1.2：跨域的方式有哪些
-A1.2：JSONP、proxy代理、CORS、XDR
+JSONP、proxy代理、CORS、XDR
 ### Q1.3：JSONP的原理是什么，缺点是什么，浏览器端如何做
-A1.3：JSONP主要是因为`script`标签的`src`属性不被同源策略所约束，同时在没有阻塞的情况下资源加载到页面后会立即执行
+JSONP主要是因为`script`标签的`src`属性不被同源策略所约束，同时在没有阻塞的情况下资源加载到页面后会立即执行
 
 缺点：
 - JSONP只支持get请求而不支持post请求，如果想传给后台一个json格式的数据,此时问题就来了,浏览器会报一个http状态码415错误，请求格式不正确
 - JSONP本质是一种代码注入，存在安全问题
 ### Q1.4：JSONP服务器端如何处理
-A1.4：实际项目中JSONP通常用来获取`json`格式的数据，这时候前后端通常约定一个参数`callback`，该参数的值，就是处理返回数据的函数名称
+实际项目中JSONP通常用来获取`json`格式的数据，这时候前后端通常约定一个参数`callback`，该参数的值，就是处理返回数据的函数名称
 ```js
 var f = function(data){
     alert(data.name)
