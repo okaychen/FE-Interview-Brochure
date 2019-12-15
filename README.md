@@ -10,7 +10,7 @@ description: >-
 
 | 篇章 | 状态 |
 | :---: | :---: |
-| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | 😀 部分完善 |
+| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | 😀 部分完善1 |
 | [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/JavaScript.md) | 😀部分完善 |
 | [网络篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/advanced/network.md) |  😂 待完善 |
 | Vue篇 | 🤔 待添加 |
