@@ -20,15 +20,12 @@
 * [ ] 算法篇               Q10
 * [ ] 构建工具篇       Q5-10
 
-{% endhint %}
-
-{% hint style="warning" %}
-
 Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 
 构建工具篇以前端工作流中的webpack为核心
 
 {% endhint %}
+
 
 ## 目录
 
