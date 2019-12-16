@@ -3,7 +3,7 @@ description: >-
   HTML&CSS篇（第一个版本该篇预计总结常见问题20个左右），HTML&CSS不少问题都能体现应届生对于前端基础的掌握程度，是应届生求职时不可忽视的重要一环
 ---
 
-# HTML&CSS
+# HTML/CSS
 
 ## Q1：浏览器解析渲染页面过程
 
@@ -24,11 +24,9 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 * 4）不使用table布局，一个小的改动可能就会引起整个table重新布局
 * 5）在内存中多次操作节点，完成后在添加到文档中
 
-## Q3：关于transform开启GPU加速渲染
+## Q3：关于transform开启GPU加速渲染，相比top&left，优势在哪里
 
-> 分析：页面性能优化有一条，用transform代替top，left来实现动画。那么transform的优势在哪里？如何开启GPU加速渲染？开启GPU硬件加速可能会触发的问题，如何解决？
-
-## Q4：相比top&left，transform的优势在哪里
+> 页面性能优化有一条，用transform代替top，left来实现动画。那么transform的优势在哪里？如何开启GPU加速渲染？开启GPU硬件加速可能会触发的问题，如何解决？
 
 首先相比定位的top&left来说，transform不会引起整个页面的回流和重绘。其次我们可以通过transform开启GPU硬件加速，提高渲染速度，但相应的transform也会占用更多的内存。
 
@@ -59,7 +57,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，用来规范文档使用哪种方式解析HTML，三种模式分别是怪异模式，标准模式，近乎模式\(IE8的一种近乎于前两者之间的一种模式\)；标准模式按照HTML和CSS定义渲染，怪异模式会模拟更旧的浏览器行为
 
-## Q8：对于两种盒模型的理解
+## Q8：说说对两种盒模型的理解
 
 标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin [![](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)
 
@@ -87,13 +85,19 @@ BFC块级格式化上下文，IFC行级格式化上下文，
 
 ```css
 static(默认值)
-absolute(绝对定位)
+absolute(绝对定位，相对于最近已定位的父元素，如果没有则相对于<html>)
 fixed(固定定位，相对于窗口)
 relative(相对定位，相对于自身)
 sticky(2017年浏览器开始支持，粘性定位)
 ```
 
-## Q11：移动端布局的解决方案
+absolute会使元素位置与文档流无关，不占据空间，absolute 定位的元素和其他元素重叠
+
+relative相对定位时，无论元素是否移动，仍然占据原来的空间
+
+sticky是2017年浏览器才开始支持，
+
+## Q11：移动端布局的解决方案，平时怎么做的处理
 
 * 使用Flexbox
 * 百分比布局结合媒体查询
@@ -266,7 +270,56 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 
 ![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
 
-Q15：
+## Q15：说说你知道的清除浮动的方法，知道其中的原理嘛
+
+清除浮动主要是为了解决父元素因为子元素浮动内部高度为0的问题
+
+* 额外标签，即在最后一个浮动标签后加一个空div，给其设置`clear:both`，缺点是增加无意义标签，语义化差
+* 给父级元素添加`overflow:不为visible`通过触发BFC的方式清除浮动
+* 使用after伪元素，缺点是IE6-7不支持伪元素，zoom:1触发hasLayout
+
+```css
+.clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearfix{
+    *zoom:1; /*ie6清除浮动的方式 *只有IE6-IE7执行*/
+}
+```
+
+* 使用before和after双伪元素清除浮动
+
+```css
+.clearfix:after,.clearfix:before{
+    content:'';
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+.clear{
+    *zoom:1;
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
