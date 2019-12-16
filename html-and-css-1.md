@@ -5,11 +5,11 @@ description: >-
 
 # HTML&CSS
 
-### Q1：浏览器解析渲染页面过程
+## Q1：浏览器解析渲染页面过程
 
 HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构建render树-&gt;根据render树进行布局渲染render layer-&gt;根据计算的布局信息进行绘制
 
-### Q2：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法
+## Q2：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法
 
 区别：
 
@@ -24,15 +24,15 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 * 4）不使用table布局，一个小的改动可能就会引起整个table重新布局
 * 5）在内存中多次操作节点，完成后在添加到文档中
 
-### Q3：关于transform开启GPU加速渲染
+## Q3：关于transform开启GPU加速渲染
 
 > 分析：页面性能优化有一条，用transform代替top，left来实现动画。那么transform的优势在哪里？如何开启GPU加速渲染？开启GPU硬件加速可能会触发的问题，如何解决？
 
-### Q4：相比top&left，transform的优势在哪里
+## Q4：相比top&left，transform的优势在哪里
 
 首先相比定位的top&left来说，transform不会引起整个页面的回流和重绘。其次我们可以通过transform开启GPU硬件加速，提高渲染速度，但相应的transform也会占用更多的内存。
 
-### Q5：transform如何开启GPU硬件加速
+## Q5：transform如何开启GPU硬件加速
 
 ```text
 .box{
@@ -42,7 +42,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-### Q6：开启GPU硬件加速可能会触发哪些问题，如何处理
+## Q6：开启GPU硬件加速可能会触发哪些问题，如何处理
 
 可能会导致浏览器频繁闪烁或者抖动，解决方案：
 
@@ -55,11 +55,11 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-### Q7：Doctype是什么，三种模式的区别在什么地方
+## Q7：Doctype是什么，三种模式的区别在什么地方
 
 Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，用来规范文档使用哪种方式解析HTML，三种模式分别是怪异模式，标准模式，近乎模式\(IE8的一种近乎于前两者之间的一种模式\)；标准模式按照HTML和CSS定义渲染，怪异模式会模拟更旧的浏览器行为
 
-### Q8：对于两种盒模型的理解
+## Q8：对于两种盒模型的理解
 
 标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin [![](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)
 
@@ -71,7 +71,7 @@ box-sizing : content-box || border-box || inherit;
 
 boxsizing属性content-box使用标准盒模型的计算方式，border-box则使用怪异盒模型的计算方式
 
-### Q9：关于IFC和BFC，哪些元素会触发BFC
+## Q9：关于IFC和BFC，哪些元素会触发BFC
 
 BFC块级格式化上下文，IFC行级格式化上下文，
 
@@ -83,7 +83,7 @@ BFC块级格式化上下文，IFC行级格式化上下文，
 * display为inline-block，table-cell，table-caption，flex
 * overflow不为visible
 
-### Q10：CSS定位的方式有哪些分别相对于谁
+## Q10：CSS定位的方式有哪些分别相对于谁
 
 ```text
 static(默认值)
@@ -93,7 +93,7 @@ relative(相对定位，相对于自身)
 sticky(2017年浏览器开始支持，粘性定位)
 ```
 
-### Q11：移动端布局的解决方案
+## Q11：移动端布局的解决方案
 
 * 使用Flexbox
 * 百分比布局结合媒体查询
@@ -107,9 +107,9 @@ em转换像素大小（em值乘以使用em单位的元素的字体大小），�
 rem平时怎么做的转换：为了方便计算，时常将html的字体大小设置为62.5%，那么12px就会是1.2rem
 {% endhint %}
 
-### Q12：CSS垂直水平居中的多种解决方案
+## Q12：CSS垂直水平居中的多种解决方案
 
-#### 未知宽高元素实现垂直水平居中
+### 未知宽高元素实现垂直水平居中
 
 ① flex实现水平垂直居中
 
@@ -123,7 +123,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
     margin: auto;
     border: 1px solid yellow;
 }
- 
+
 .child {
     width: 100px;
     height: 100px;
@@ -141,14 +141,14 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
       margin: auto;
       border: 1px solid yellow;
     }
- 
+
 .child {
       position: absolute;
       width: 100px;
       height: 100px;
       border: 1px solid blue;
     }
-    
+
 .method3 {
       top: 50%;
       left: 50%;
@@ -156,7 +156,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
     }
 ```
 
-#### 已知宽高元素的垂直水平居中
+### 已知宽高元素的垂直水平居中
 
 ① 绝对定位+`margin:auto`
 
@@ -168,7 +168,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
   margin: auto;
   border: 1px solid red;
 }
- 
+
 .child {
   position: absolute;
   margin: auto;
@@ -192,7 +192,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
       margin: auto;
       border: 1px solid red;
     }
- 
+
 .child {
       position: absolute;
       top: 50%;
@@ -202,6 +202,5 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
       height: 100px;
       border: 1px solid blue;
 }
-
 ```
 
