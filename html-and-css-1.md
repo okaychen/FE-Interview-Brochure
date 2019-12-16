@@ -34,7 +34,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 ## Q5：transform如何开启GPU硬件加速
 
-```text
+```css
 .box{
     transform:translateZ(0);
     //或者
@@ -46,7 +46,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 可能会导致浏览器频繁闪烁或者抖动，解决方案：
 
-```text
+```css
 .box{
     backface-visibility: hidden;
     perspective: 1000;
@@ -65,7 +65,7 @@ Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，
 
 怪异盒模型，IE5.X 和 6 在怪异模式中使用自己的非标准模型，盒子的总宽度和高度是包含内边距padding和边框border宽度在内的：盒子总宽度/高度=width/height + margin = width/height + margin; [![](https://camo.githubusercontent.com/fe676305e5f72b3e682664a683697eac68e0eb37/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)](https://camo.githubusercontent.com/fe676305e5f72b3e682664a683697eac68e0eb37/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)
 
-```text
+```css
 box-sizing : content-box || border-box || inherit;
 ```
 
@@ -85,7 +85,7 @@ BFC块级格式化上下文，IFC行级格式化上下文，
 
 ## Q10：CSS定位的方式有哪些分别相对于谁
 
-```text
+```css
 static(默认值)
 absolute(绝对定位)
 fixed(固定定位，相对于窗口)
@@ -107,13 +107,13 @@ em转换像素大小（em值乘以使用em单位的元素的字体大小），�
 rem平时怎么做的转换：为了方便计算，时常将html的字体大小设置为62.5%，那么12px就会是1.2rem
 {% endhint %}
 
-## Q12：CSS垂直水平居中的多种解决方案
+## Q12：垂直水平居中的多种解决方案
 
 ### 未知宽高元素实现垂直水平居中
 
 ① flex实现水平垂直居中
 
-```text
+```css
 .parent {
     display: flex;
     justify-content: center;
@@ -133,7 +133,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 
 ② 进行垂直水平居中（利用transform中translate偏移的百分比值是相对于自身大小的特性）
 
-```text
+```css
 .parent {
       position: relative;
       width: 600px;
@@ -160,7 +160,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 
 ① 绝对定位+`margin:auto`
 
-```text
+```css
 .parent {
   position: relative;
   width: 600px;
@@ -184,7 +184,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 
 ② 使用绝对定位与负边距
 
-```text
+```css
 .parent {
       position: relative;
       width: 600px;
@@ -203,4 +203,8 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
       border: 1px solid blue;
 }
 ```
+
+## Q13：圣杯布局和双飞翼布局
+
+圣杯布局和双飞翼布局都是
 
