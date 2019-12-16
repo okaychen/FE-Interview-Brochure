@@ -1,5 +1,5 @@
 ---
-description: HTTP篇（第一个版本预计总结常见问题10个左右）
+description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左右）
 ---
 
 # HTTP/浏览器

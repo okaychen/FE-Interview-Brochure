@@ -30,7 +30,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 首先相比定位的top&left来说，transform不会引起整个页面的回流和重绘。其次我们可以通过transform开启GPU硬件加速，提高渲染速度，但相应的transform也会占用更多的内存。
 
-## Q5：transform如何开启GPU硬件加速
+## Q4：transform如何开启GPU硬件加速
 
 ```css
 .box{
@@ -40,7 +40,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-## Q6：开启GPU硬件加速可能会触发哪些问题，如何处理
+## Q5：开启GPU硬件加速可能会触发哪些问题，如何处理
 
 可能会导致浏览器频繁闪烁或者抖动，解决方案：
 
@@ -52,6 +52,40 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
     -webkit-perspective: 1000;
 }
 ```
+
+## Q6：移动端点透现象有遇到过嘛
+
+首先需要了解的是，移动端在touch上一共有4个事件，
+
+执行顺序为`touchstart -> touchmove -> touchend -> touchcancel`
+
+当用户点击屏幕时，会触发touch和click事件，touch事件会优先处理，touch事件经过捕获，目标，冒泡一系列流程处理完成之后，才会触发click，所有我们经常会谈到移动端点击事件300ms延迟的问题
+
+移动端点击事件300ms问题，常见的解决方案：
+
+* 阻止用户双击缩放，并限制视口大小
+
+```markup
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+```
+
+* 设置css`touch-action`用于指定某个给定的区域是否允许用户操作，以及如何相应用户操作
+
+```css
+* {
+  touch-action: none;
+}
+```
+
+* fastclick.js来解决，其原理是在检测到touchend事件的时候，会通过自定义事件立即触发模拟一个click事件，并在300ms之后把真正的click时间阻止掉
+
+#### 点透现象
+
+发生条件：①按钮A和按钮B不是后代继承关系，②A发生touch，A touch后立即消失，B绑定click，③A z-index大于B，即 A 显示在 B 浮层之上
+
+发生原因：当点击屏幕时，系统生成touch和click两个事件，touch先执行，touch执行完之后A消失，然后要执行click的时候，就会发现用户点击的是B，所以就执行了B的click
+
+解决方法：①阻止默认事件，在touch的某个时间段执行event.preventDefault，去取消系统生成的click事件，一半在 touchend 中执行。②要消失的元素延迟300ms后在消失
 
 ## Q7：Doctype是什么，三种模式的区别在什么地方
 
@@ -95,7 +129,7 @@ absolute会使元素位置与文档流无关，不占据空间，absolute 定位
 
 relative相对定位时，无论元素是否移动，仍然占据原来的空间
 
-sticky是2017年浏览器才开始支持，
+sticky是2017年浏览器才开始支持，会产生动态效果，一个实例是"[动态固定](http://www.ruanyifeng.com/blog/2019/11/css-position.html)"，生效前提是必须搭配`top,left,bottom,right`一起使用，不能省略，否则等同于`relative`定位，不产生"动态固定"的效果
 
 ## Q11：移动端布局的解决方案，平时怎么做的处理
 
@@ -304,22 +338,5 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 .clear{
     *zoom:1;
 }
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
