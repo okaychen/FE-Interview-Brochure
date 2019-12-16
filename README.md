@@ -7,7 +7,6 @@
 ## 计划
 
 {% hint style="info" %}
-
 🤤 主要面向对象：应届生求职--前端
 
 第一版预计完成
@@ -23,7 +22,6 @@
 Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 
 构建工具篇以前端工作流中的webpack为核心
-
 {% endhint %}
 
 ## 目录
@@ -37,4 +35,8 @@ Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 | 算法篇 | 🤔 待添加 |
 | 安全篇 | 🤔 待添加 |
 | 构建工具篇 | 🤔 待添加 |
+
+## License
+
+[MIT](https://github.com/okaychen/FE-Interview-Questions/blob/master/LICENSE)
 
