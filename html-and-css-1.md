@@ -204,7 +204,69 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 }
 ```
 
-## Q13：圣杯布局和双飞翼布局
+## Q13：经典的三栏布局的实现方式
+
+三栏布局：两侧定宽中间自适应，在开发中很常见的布局方式，主要有下面六种实现方式：
+
+* 最简单的方式就是通过float实现
+* 利用绝对定位
+* 利用BFC规则
+* 圣杯布局（通过margin负值调整）
+* 双飞翼布局（和双飞翼布局类似，只是处理中间栏被遮挡的方式不同：双飞翼布局在中间栏内部加一个div，设置其margin来避开遮挡）
+* 利用flex布局
+
+## Q14：对flex布局的了解，flex如何实现经典的三栏布局
+
+flex意为弹性布局，有两大概念，一是容器\(container\)，二是项目\(item\)，两者都有各自的六个常用属性
+
+用在容器上的六个属性：
+
+* `flex-direction`主轴的方向，
+* `flex-wrap`一条轴线装满，如何换行，
+* `flex-flow`是前两者的简写，
+* `justify-content`项目在主轴上的对齐方式
+* `align-items`在交叉轴上如何对齐
+* `align-content`多跟轴线的对齐方式
+
+用在项目上的六个属性:
+
+* `order`排序顺序，默认为0，越小越靠前
+* `flex-grow`项目的放大比例，默认为0，不放大
+* `flex-shrink`项目的缩小比例，默认为1，空间不足该项目会缩小
+* `flex-basis`项目占据主轴空间大小
+* `flex`是上面放大，缩小，大小三者的简写，默认`0  1  auto`
+* `align-self`允许单个项目有不同于其他的对齐方式
+
+```markup
+<!--flex实现经典的三栏布局-->
+<style>
+.flex-container{
+		display: flex;
+		height: 200px;
+}
+.middle {
+		height: 200px;
+		background-color: yellowgreen;
+    flex-grow: 1;
+}
+.left,.right {
+    height: 200px;
+    flex: 0 1 200px;
+    background-color: green;
+}
+
+</style>
+
+<div class="flex-container">
+		<div class="left">左侧内容</div>
+		<div class="middle">中间内容</div>
+		<div class="right">右侧内容</div>
+</div>
+```
+
+![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
+
+
 
 
 
