@@ -77,7 +77,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-* fastclick.js来解决，其原理是在检测到touchend事件的时候，会通过自定义事件立即触发模拟一个click事件，并在300ms之后把真正的click时间阻止掉
+* fastclick.js来解决，其原理是在检测到touchend事件的时候，会通过自定义事件立即触发模拟一个click事件，并在300ms之后把真正的click事件阻止掉
 
 #### 点透现象
 
@@ -272,7 +272,7 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 * `flex-grow`项目的放大比例，默认为0，不放大
 * `flex-shrink`项目的缩小比例，默认为1，空间不足该项目会缩小
 * `flex-basis`项目占据主轴空间大小
-* `flex`是上面放大，缩小，大小三者的简写，默认`0  1  auto`
+* `flex`是上面放大，缩小，大小三者的简写，默认为0 1 auto
 * `align-self`允许单个项目有不同于其他的对齐方式
 
 ```markup
