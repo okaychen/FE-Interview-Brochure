@@ -188,6 +188,7 @@ ES6新增数据类型：`symbol`、`Map`、`Set`
 - 问题准备：
 - 对map和reduce方法的理解，区别在哪里
 - 能手写map或者reduce嘛
+- Ajax的原生实现
 - Promise的了解，手撕promise.all
 - webscoket的了解，有了http为什么需要websocket
 - js里面为什么0.1+0.2不等于0.3
@@ -198,7 +199,6 @@ ES6新增数据类型：`symbol`、`Map`、`Set`
 - 值类型和引用类型，在内存中的存放位置
 - 对eventloop事件循环机制的理解
 - 说一下js的垃圾回机制
-- 对与宏任务和微任务的理解
 - 对函数柯里化有认识嘛
 - setTimeout用作倒计时为什么会产生误差
 - 
