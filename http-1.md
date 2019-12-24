@@ -29,3 +29,16 @@ description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左
 
 因为服务端收到SYN建连报文后，可以把ACK报文和SYN报文放在一起发送。但是当关闭连接的时候，当对方收到FIN报文通知时，仅仅表示对方已经无数据发送给你了，但未必你已经发送完全部数据，这时就不能马上关闭socket，所以释放连接过程SYN包和ACK包要分开发送。
 
+> 问题准备
+- HTTP方法有哪些，这些方法的作用，get和post的区别知道的有哪些
+- HTTP建立持久连接的意义
+- HTTP2相比HTTP1的优势和特点
+- HTTP相比1.0相比1.1的区别有哪些
+- HTTP的缓存过程（强缓存和协商缓存）
+- HTTPS相比HTTP的区别，讲一下HTTPS的实现过程
+- 说一下HTTP的状态码，301和302的区别
+- 对HTTP报文结构的了解
+- TPC/IP的分层结构
+- TCP和UDP区别有哪些
+- Ajax的原生实现
+- 存储机制localStorage，sessionStorage与Cookie存储技术
