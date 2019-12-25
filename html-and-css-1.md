@@ -5,11 +5,11 @@ description: >-
 
 # HTML/CSS
 
-## Q1：浏览器解析渲染页面过程
+## 1：浏览器解析渲染页面过程
 
 HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构建render树-&gt;根据render树进行布局渲染render layer-&gt;根据计算的布局信息进行绘制
 
-## Q2：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法
+## 2：布局渲染的过程发生的回流和重绘区别&减少回流次数的方法
 
 区别：
 
@@ -24,13 +24,13 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 * 4）不使用table布局，一个小的改动可能就会引起整个table重新布局
 * 5）在内存中多次操作节点，完成后在添加到文档中
 
-## Q3：关于transform开启GPU加速渲染，相比top&left，优势在哪里
+## 3：关于transform开启GPU加速渲染，相比top&left，优势在哪里
 
 > 页面性能优化有一条，用transform代替top，left来实现动画。那么transform的优势在哪里？如何开启GPU加速渲染？开启GPU硬件加速可能会触发的问题，如何解决？
 
 首先相比定位的top&left来说，transform不会引起整个页面的回流和重绘。其次我们可以通过transform开启GPU硬件加速，提高渲染速度，但相应的transform也会占用更多的内存。
 
-## Q4：transform如何开启GPU硬件加速
+## 4：transform如何开启GPU硬件加速
 
 ```css
 .box{
@@ -40,7 +40,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-## Q5：开启GPU硬件加速可能会触发哪些问题，如何处理
+## 5：开启GPU硬件加速可能会触发哪些问题，如何处理
 
 可能会导致浏览器频繁闪烁或者抖动，解决方案：
 
@@ -53,7 +53,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 }
 ```
 
-## Q6：移动端点透现象有遇到过嘛
+## 6：移动端点透现象有遇到过嘛
 
 首先需要了解的是，移动端在touch上一共有4个事件，
 
@@ -87,11 +87,11 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 解决方法：①阻止默认事件，在touch的某个时间段执行event.preventDefault，去取消系统生成的click事件，一半在 touchend 中执行。②要消失的元素延迟300ms后在消失
 
-## Q7：Doctype是什么，三种模式的区别在什么地方
+## 7：Doctype是什么，三种模式的区别在什么地方
 
 Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，用来规范文档使用哪种方式解析HTML，三种模式分别是怪异模式，标准模式，近乎模式\(IE8的一种近乎于前两者之间的一种模式\)；标准模式按照HTML和CSS定义渲染，怪异模式会模拟更旧的浏览器行为
 
-## Q8：说说对两种盒模型的理解
+## 8：说说对两种盒模型的理解
 
 标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin [![](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)
 
@@ -103,7 +103,7 @@ box-sizing : content-box || border-box || inherit;
 
 boxsizing属性content-box使用标准盒模型的计算方式，border-box则使用怪异盒模型的计算方式
 
-## Q9：关于IFC和BFC，哪些元素会触发BFC
+## 9：关于IFC和BFC，哪些元素会触发BFC
 
 BFC块级格式化上下文，IFC行级格式化上下文，
 
@@ -115,7 +115,7 @@ BFC块级格式化上下文，IFC行级格式化上下文，
 * display为inline-block，table-cell，table-caption，flex
 * overflow不为visible
 
-## Q10：CSS定位的方式有哪些分别相对于谁
+## 10：CSS定位的方式有哪些分别相对于谁
 
 ```css
 static(默认值)
@@ -131,7 +131,7 @@ relative相对定位时，无论元素是否移动，仍然占据原来的空间
 
 sticky是2017年浏览器才开始支持，会产生动态效果，一个实例是"[动态固定](http://www.ruanyifeng.com/blog/2019/11/css-position.html)"，生效前提是必须搭配`top,left,bottom,right`一起使用，不能省略，否则等同于`relative`定位，不产生"动态固定"的效果
 
-## Q11：移动端布局的解决方案，平时怎么做的处理
+## 11：移动端布局的解决方案，平时怎么做的处理
 
 * 使用Flexbox
 * 百分比布局结合媒体查询
@@ -145,7 +145,7 @@ em转换像素大小（em值乘以使用em单位的元素的字体大小），�
 rem平时怎么做的转换：为了方便计算，时常将html的字体大小设置为62.5%，那么12px就会是1.2rem
 {% endhint %}
 
-## Q12：垂直水平居中的多种解决方案
+## 12：垂直水平居中的多种解决方案
 
 ### 未知宽高元素实现垂直水平居中
 
@@ -242,7 +242,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 }
 ```
 
-## Q13：经典的三栏布局的实现方式
+## 13：经典的三栏布局的实现方式
 
 三栏布局：两侧定宽中间自适应，在开发中很常见的布局方式，主要有下面六种实现方式：
 
@@ -253,7 +253,7 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 * 双飞翼布局（和双飞翼布局类似，只是处理中间栏被遮挡的方式不同：双飞翼布局在中间栏内部加一个div，设置其margin来避开遮挡）
 * 利用flex布局 👇 _Q14_ 
 
-## Q14：对flex布局的了解，flex如何实现经典的三栏布局
+## 14：对flex布局的了解，flex如何实现经典的三栏布局
 
 flex意为弹性布局，有两大概念，一是容器\(container\)，二是项目\(item\)，两者都有各自的六个常用属性
 
@@ -279,12 +279,12 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 <!--flex实现经典的三栏布局-->
 <style>
 .flex-container{
-		display: flex;
-		height: 200px;
+        display: flex;
+        height: 200px;
 }
 .middle {
-		height: 200px;
-		background-color: yellowgreen;
+        height: 200px;
+        background-color: yellowgreen;
     flex-grow: 1;
 }
 .left,.right {
@@ -296,15 +296,15 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 </style>
 
 <div class="flex-container">
-		<div class="left">左侧内容</div>
-		<div class="middle">中间内容</div>
-		<div class="right">右侧内容</div>
+        <div class="left">左侧内容</div>
+        <div class="middle">中间内容</div>
+        <div class="right">右侧内容</div>
 </div>
 ```
 
 ![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
 
-## Q15：说说你知道的清除浮动的方法，知道其中的原理嘛
+## 15：说说你知道的清除浮动的方法，知道其中的原理嘛
 
 清除浮动主要是为了解决父元素因为子元素浮动内部高度为0的问题
 
@@ -341,4 +341,6 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 ```
 
 > 问题准备
-- margin塌陷及合并问题
+>
+> * margin塌陷及合并问题
+
