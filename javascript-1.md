@@ -182,7 +182,55 @@ ES6新增数据类型：`symbol`、`Map`、`Set`
 > ```
 >
 > * set是object里面的一种，set里无论原始值还是引用类型的值，重复的都只会保留一个
-> * map可以允许任何类型作为对象的键，弥补了object只能使用字符串作为键
+> * Map可以允许任何类型作为对象的键，弥补了object只能使用字符串作为键（注意Map是ES6中的一种数据结构，区别于数组方法map）
+
+## Q8：对数组方法map和reduce方法的理解，区别在哪里
+map方法的调用者一般是数组，参数是一个callback函数，返回值是一个由原数组中每个元素执行callback函数得到的返回值组成的新数组
+
+举个栗子：
+```js
+// 接口数据映射
+let arr = res.map(item=>{
+    return {
+        name:item.name,
+        age:item.age,
+        sex:item.sex === 1? '男':item.sex === 0?'女':'保密',
+        avatar: item.img
+    }
+})
+```
+
+reduce方法调用者也一般为数组，参数是callback和一个可选的initialValue，为数组中每个元素执行callback函数，返回一个具体的结果，如果给定initialValue可以作为第一次调用callback的第一个参数，可以控制返回值的格式
+
+举个栗子：
+```js
+// 求一个字符串中每个字母出现的次数
+let str = 'abcabdaac'
+str.split('').reduce((res,cur)=>{
+    res[cur] ? res[cur]++ : res[cur] = 1
+    return res
+},{})  
+// {a: 4, b: 2, c: 2, d: 1}
+```
+
+## Q9：对map和reduce实现的理解，能手写一下嘛
+数组方法map模拟实现：
+```js
+Array.prototype.map = Array.prototype.map || fn => {
+    let newArr = [];
+    let me = this;
+    for(let i = 0;i<me.length;i++){
+        newArr.push(fn(me[i]));
+    }
+    return newArr;
+}
+```
+数组方法reduce模拟实现：方法类似核心是数组的遍历，因为reduce有第二个可选参数initialValue做起始值，所以要判断是否有可选参数作为遍历的起始值，并将得到的参数传入回调函数中执行
+```js
+Array.prototype.reduce = Array.prototype.reduce || (callback,initialValue) => {
+    
+}
+```
 
 >
 - 问题准备：
