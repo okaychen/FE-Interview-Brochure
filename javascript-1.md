@@ -216,7 +216,7 @@ str.split('').reduce((res,cur)=>{
 ## Q9：对map和reduce实现的理解，能手写一下嘛
 数组方法map模拟实现：
 ```js
-Array.prototype.map = Array.prototype.map || fn => {
+Array.prototype._map = fn => {
     let newArr = [];
     let me = this;
     for(let i = 0;i<me.length;i++){
@@ -227,10 +227,20 @@ Array.prototype.map = Array.prototype.map || fn => {
 ```
 数组方法reduce模拟实现：方法类似核心是数组的遍历，因为reduce有第二个可选参数initialValue做起始值，所以要判断是否有可选参数作为遍历的起始值，并将得到的参数传入回调函数中执行
 ```js
-Array.prototype.reduce = Array.prototype.reduce || (callback,initialValue) => {
-    
+Array.prototype._reduce = (callback, initialValue) => {
+    let arr = this;
+    let base = typeof initialValue == 'undefined' ? arr[0] : initialValue;
+    let startPoint = typeof initialValue === 'undefined' ? 1 : 0;
+    arr.slice(startPoint).forEach((val, index) => {
+        base = callback(base, val, index + startPoint, arr)
+    })
+    return base
 }
 ```
+
+## 10：Ajax的原生实现
+首先需要知道的是Ajax主要是通过`XMLHttpRequest`对象向服务器提出请求并处理响应，进行页面的局部更新，而XMLHttpRequest对象有三大属性`onreadystatechange`，`readyState`，`status`
+
 
 >
 - 问题准备：
