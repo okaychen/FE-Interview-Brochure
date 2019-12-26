@@ -330,12 +330,85 @@ fetch('./api/demo.json')
     .catch((err) => {...});
 ```
 
-## 12：Promise的了解，手撕promise.all
+## 12：Promise的了解，手撕Promise\(Promise.all或者Promise.race\)
+
+Promise是一种异步编程的解决方法，相比容易陷入回调地狱的回调函数，采用链式调用的方式更合理也更方便，Promise有三种状态：`pending`（进行中）、`fulfilled`（已成功）和`rejected`（已失败），接受一个作为函数作为参数，该函数有两个参数，分别是`resolve`和`reject`两个函数
+
+```javascript
+// Promise的模拟实现
+class _Promise {
+    constructor(fn) {
+        let _this = this;
+        this._queue = [];
+        this._success = null;
+        this._error = null;
+        this.status = '';
+        fn((...arg) => {
+            // resolve
+            if (_this.status != 'error') {
+                _this.status = 'success';
+                _this._success = arg;
+                _this._queue.forEach(json => {
+                    json.fn1(...arg)
+                })
+            }
+        }, (...arg) => {
+            // reject
+            if (_this.status != 'success') {
+                _this.status = 'error';
+                _this._error = arg;
+                _this._queue.forEach(json => {
+                    json.fn2(...arg)
+                })
+            }
+        })
+    }
+
+    then(fn1, fn2) {
+        let _this = this;
+        return new _Promise((resolve, reject) => {
+            if (_this.status == 'success') {
+                resolve(fn1(..._this._success))
+            } else if (_this.status == 'error') {
+                fn2(..._this._error)
+            } else {
+                _this._queue.push({fn1,fn2});
+            }
+        })
+    }
+}
+```
+
+Promise.all和Promise.race在实际应用中的比较，比如从接口中获取数据，等待所有数据到达后执行某些操作可以用前者，如果从几个接口中获取相同的数据哪个接口先到就用哪个可以使用后者
+
+```javascript
+//Promise.all的模拟实现(race的实现类似)
+Promise.prototype._all = interable => {
+    let results = [];
+    let promiseCount = 0;
+    return new Promise(function (resolve, reject) {
+        for (let val of iterable) {
+            Promise.resolve(val).then(res => {
+                promiseCount++;
+                results[i] = res;
+                if (promiseCount === interable.length) {
+                    return resolve(results);
+                }
+            }, err => {
+                return reject(err);
+            })
+        }
+    })
+}
+```
+
+## 13：js里面为什么0.1+0.2不等于0.3
+
+
 
 
 
 * 问题准备：
-* webscoket的了解，有了http为什么需要websocket
 * js里面为什么0.1+0.2不等于0.3
 * 如何正确判断this
 * 闭包的概念及应用

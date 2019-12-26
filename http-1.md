@@ -39,6 +39,7 @@ description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左
 > * HTTPS相比HTTP的区别，讲一下HTTPS的实现过程
 > * 说一下HTTP的状态码，301和302的区别
 > * 对HTTP报文结构的了解
+> * webscoket的了解，有了HTTP为什么需要websocket
 > * TPC/IP的分层结构
 > * TCP和UDP区别有哪些
 > * 对宏任务和微任务的理解，微任务都有哪些
