@@ -402,7 +402,99 @@ Promise.prototype._all = interable => {
 }
 ```
 
-## 13：js里面为什么0.1+0.2不等于0.3
+## 13：js为什么0.1+0.2不等于0.3
+
+主要是因为JavaScript同样采用IEEE754标准，在64位中存储一个数字的有效数字形式
+
+![](https://upload-images.jianshu.io/upload_images/16299591-8bfb445d26370aa4.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+
+第0位表示符号位，0表示整数1表示负数，第1~11位存储指数部分，第12~63位存小数部分；
+
+由于二进制的有效数字总是表示为`1.xxx...`这样的形式，尾数部分在规约形式下的第一位默认为1，故存储时第一位省略不写，尾数部分存储有效数字小数点后的xxx...，最长52位，因此，JavaScript提供的有效数字最长为53个二进制位（尾数部分52位+被省略的1位）
+
+由于需要对求和结果规格化\(用有效数字表示\)，右规导致低位丢失，此时需对丢失的低位进行舍入操作，遵循IEEE754舍入规则，会有精度损失
+
+## 14：如何正确判断与使用this，箭头函数有没有自己的this指针
+
+> this有四种绑定规则，默认绑定、隐式绑定、显示绑定、new 绑定，优先级由低到高
+>
+> 在ECMA内，this 会调用原生方法 `ResolveThisBinding()` 原生方法，该方法使用正在运行的执行上下文的`LexicalEnvironment`确定关键字this的绑定
+>
+> 可以简单总结为：谁**直接调用产生这个this指针的函数**，this就指向谁
+
+* this在一般模式下指向全局对象；严格模式下 this 默认为undefined 
+* 箭头函数没有自己的this指针，它的this绑定取决于外层（函数或全局）作用域）
+* call，apply，bind在非箭头函数下修改this值（箭头函数下只传递参数），不管call , bind, apply多少次，函数的this永远由第一次的决定
+
+## 15：对闭包的了解及其应用场景
+
+闭包是指有权访问另外一个函数作用域中的变量的函数.可以理解为\(**能够读取其他函数内部变量的函数**\)
+
+**闭包的作用:** 正常函数执行完毕后,里面声明的变量被垃圾回收处理掉,但是闭包可以让作用域里的变量,在函数执行完之后依旧保持没有被垃圾回收处理掉
+
+具体有以下几个应用场景：
+
+```javascript
+//经典案例：斐波那契数列 ：1, 1, 2, 3, 5, 8, 13, …
+let count = 0;
+const fib = (()=>{
+    let arr = [1,1]
+    return function(n){
+        count++;
+        let res = arr[n];
+        if(res){
+            return res;
+        }else{
+            arr[n] = fib(n-1) + fib(n-2);
+            return arr[n]
+        }
+    }
+})();
+```
+
+```javascript
+//通过闭包特性，模拟私有变量
+const book = (function () {
+    var page = 100;
+    return function () {
+        this.auther = 'okaychen';
+        this._page = function () {
+            console.log(page);
+        }
+    }
+})();
+
+var a = new book();
+a.auther  // "okaychen"
+a._page() // 100
+a.page    // undefined
+```
+
+```javascript
+for (var i=1; i<=5; i++) { 
+    setTimeout( function timer() {
+        console.log(i);
+    }, i*1000 );
+}
+// 经典老问题，输出结果：6 6 6 6 6
+// js执行的时候首先会先执行主线程,异步相关的(setTimeout)会存到异步队列里,
+// 当主线程执行完毕开始执行异步队列,主线程执行完毕后,此时 i 的值为 6,
+// 所以在执行异步队列的时候,打印出来的都是 6
+// ---需要对eventloop有一定的认识(见19)---
+
+// 利用闭包来取正确值
+for (var i=1; i<=5; i++) { 
+    setTimeout( (function(i) {
+        return function() {
+            console.log(i);
+        }
+    })(i), i*1000 );
+}
+```
+
+
+
+
 
 
 
@@ -419,4 +511,6 @@ Promise.prototype._all = interable => {
 * 说一下js的垃圾回机制
 * 对函数柯里化有认识嘛
 * setTimeout用作倒计时为什么会产生误差
-* 
+
+
+
