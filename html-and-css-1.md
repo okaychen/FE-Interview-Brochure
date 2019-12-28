@@ -65,7 +65,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 * 阻止用户双击缩放，并限制视口大小
 
-```markup
+```css
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 ```
 
@@ -275,7 +275,7 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 * `flex`是上面放大，缩小，大小三者的简写，默认为0 1 auto
 * `align-self`允许单个项目有不同于其他的对齐方式
 
-```markup
+```css
 <!--flex实现经典的三栏布局-->
 <style>
 .flex-container{

@@ -76,7 +76,7 @@ if(req.headers.origin){
 
 简单列表滚动加载是监听滚动条在满足条件的时候触发回调，然后通过把新的元素加入到页面页尾的方法完成，但是如果用户加载过多列表数据\(比如我这一个列表页有一万条数据需要展示\)，那么用户不断加载，页面不断增加新的元素，很容易就导致页面元素过多而造成卡顿，所以就提出的列表的无限滚动加载，主要是在删除原有元素并且维持高度的基础上，生成并加载新的数据
 
-## 4：如果滚动过快怎么办，高频率触发事件解决方案-防抖和节流
+## 5：如果滚动过快怎么办，高频率触发事件解决方案-防抖和节流
 
 节流：在一段时间内不管触发了多少次都只认为触发了一次，等计时结束进行响应（假设设置的时间为2000ms，再触发了事件的2000ms之内，你在多少触发该事件，都不会有任何作用，它只为第一个事件等待2000ms。时间一到，它就会执行了。 ）
 
@@ -293,56 +293,15 @@ Array.prototype._reduce = (callback, initialValue) => {
 
 首先需要知道的是Ajax主要是通过`XMLHttpRequest`对象向服务器提出请求并处理响应，进行页面的局部更新，XMLHttpRequest对象常用的三大属性：`onreadystatechange`，`readyState`，`status`
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">&#x5C5E;&#x6027;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center"><code>onreadystatechange</code>
-      </td>
-      <td style="text-align:left"><code>readyState</code>&#x5C5E;&#x6027;&#x7684;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;readystatechange&#x4E8B;&#x4EF6;</td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><code>readyState</code>
-      </td>
-      <td style="text-align:left">
-        <p>&#x5B58;&#x6709;XMLHttpRequest&#x7684;&#x72B6;&#x6001;</p>
-        <ul>
-          <li>0&#xFF1A;&#x8BF7;&#x6C42;&#x672A;&#x521D;&#x59CB;&#x5316;</li>
-          <li>1&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x5DF2;&#x5EFA;&#x7ACB;</li>
-          <li>2&#xFF1A;&#x8BF7;&#x6C42;&#x5DF2;&#x63A5;&#x6536;</li>
-          <li>3&#xFF1A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E2D;</li>
-          <li>4&#xFF1A;&#x8BF7;&#x6C42;&#x5DF2;&#x5B8C;&#x6210;&#xFF0C;&#x4E14;&#x54CD;&#x5E94;&#x5DF2;&#x5C31;&#x7EEA;</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><code>status</code>
-      </td>
-      <td style="text-align:left">
-        <p><code>status</code>&#x5C5E;&#x6027;&#x4E3A;&#x53EA;&#x8BFB;&#x5C5E;&#x6027;&#xFF0C;&#x8868;&#x793A;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x6240;&#x5F97;&#x5230;&#x7684;HTTP&#x72B6;&#x6001;&#x7801;</p>
-        <ul>
-          <li>200, OK&#xFF0C;&#x8BBF;&#x95EE;&#x6B63;&#x5E38;</li>
-          <li>301, Moved Permanently&#xFF0C;&#x6C38;&#x4E45;&#x79FB;&#x52A8;</li>
-          <li>302, Move temporarily&#xFF0C;&#x6682;&#x65F6;&#x79FB;&#x52A8;</li>
-          <li>304, Not Modified&#xFF0C;&#x672A;&#x4FEE;&#x6539;</li>
-          <li>307, Temporary Redirect&#xFF0C;&#x6682;&#x65F6;&#x91CD;&#x5B9A;&#x5411;</li>
-          <li>401, Unauthorized&#xFF0C;&#x672A;&#x6388;&#x6743;</li>
-          <li>403, Forbidden&#xFF0C;&#x7981;&#x6B62;&#x8BBF;&#x95EE;</li>
-          <li>404, Not Found&#xFF0C;&#x672A;&#x53D1;&#x73B0;&#x6307;&#x5B9A;&#x7F51;&#x5740;</li>
-          <li>500, Internal Server Error&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x751F;&#x9519;&#x8BEF;</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>```javascript
+| 属性                 | 描述                                                         |
+| -------------------- | :----------------------------------------------------------- |
+| `onreadystatechange` | `readyState`属性的值发生改变，就会触发readystatechange事件   |
+| `readyState`         | 存有XMLHttpRequest的状态<br />0：请求未初始化<br />1：服务器连接已建立<br />2：请求已接收<br />3：请求处理中<br />4：请求已完成，且响应已就绪 |
+| `status`             | `status`属性为只读属性，表示本次请求所得到的HTTP状态码<br />200, OK，访问正常<br />301, Moved Permanently，永久移动<br />302, Move temporarily，暂时移动<br />304, Not Modified，未修改<br />307, Temporary Redirect，暂时重定向<br />401, Unauthorized，未授权<br />403, Forbidden，禁止访问<br />404, Not Found，未发现指定网址<br />500, Internal Server Error，服务器发生错误 |
+
+```javascript
 //Ajax原生简单实现
 let xhr = XMLHttpRequest;
-    
 xhr.onreadystatechange = () => {
     if(xhr.readyState === 4){
         if(xhr.status === 200){
@@ -352,13 +311,10 @@ xhr.onreadystatechange = () => {
         }
     }
 }
-
 xhr.onerror = e => {
     console.error(xhr.statusText);
 }
-
 xhr.open('GET','/EndPonint',true);
-
 xhr.send(null);
 ```
 
@@ -366,7 +322,7 @@ xhr.send(null);
 
 XMLHttpRequest历史悠久，因为其API设计其实并不是很好，输入，输出，状态都在同一个接口管理，容易写出非常非常混乱的代码，Fetch API采取了一种新规范，用来取代XMLHttpReques，Fetch更现代化，更接近于未来，内部使用了Promise，用起来也更加简洁
 
-```javascript
+```JavaScript
 fetch('./api/demo.json')
     .then((response) => {
         response.json().then((data) => {
@@ -375,7 +331,6 @@ fetch('./api/demo.json')
     });
     .catch((err) => {...});
 ```
-
 ## 12：Promise的了解，手撕Promise\(Promise.all或者Promise.race\)
 
 Promise是一种异步编程的解决方法，相比容易陷入回调地狱的回调函数，采用链式调用的方式更合理也更方便，Promise有三种状态：`pending`（进行中）、`fulfilled`（已成功）和`rejected`（已失败），接受一个作为函数作为参数，该函数有两个参数，分别是`resolve`和`reject`两个函数
@@ -616,11 +571,38 @@ const _new = function(){
 }
 ```
 
+## 20：有了解过js的垃圾回收机制嘛
+
+JavaScript内存管理有一个主要概念是可达性，“可达性” 值是那些以某种方式可访问或可用的值，它们被保证存储在内存中
+
+有一组基本的固有可达值，由于显而易见的原因无法删除，比如：本地函数的局部变量和参数，
+
+JavaScript在创建变量时自动进行了内存分配，并且在它们不使用时**"自动"**释放，释放的过程就被称为垃圾回收。
 
 
 
+现在各大浏览器通常用采用的垃圾回收有两种方法：标记清除、引用计数
 
-## 
+- 引用计数垃圾收集：把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。但是有一个限制是"无法处理循环引用问题"
+
+```javascript
+var element = document.getElementById("some_element");
+var myObj =new Object();
+myObj.element = element;
+element.someObject = myObj;
+// 变量myObj有一个element属性执行element，而变量element有一个名为someObject属性指回myObj，因为循环引用，引用计数法将没办法回收该内存
+
+// 我们需要手动切断它们的循环引用，防止内存泄露
+myObj.element = null;
+element.someObject =null;
+```
+
+- 标记清除：是js中最常用的垃圾回收方式，把“对象是否不再需要”简化定义为“对象是否可以获得”，定期会执行以下的"垃圾回收"步骤：
+  - 垃圾回收器获取根并**“标记”**它们
+  - 然后它访问并“标记”所有来自它们的引用
+  - 接着它访问标记的对象并标记它们的引用(子孙代的引用)
+  - 以此类推，直至有未访问的引用，此时进程中不能访问的对象将被认为是不可访问的
+  - 除标记的对象外，其余对象将被删除
 
 
 
