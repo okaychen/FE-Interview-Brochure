@@ -573,21 +573,17 @@ const _new = function(){
 
 ## 20：有了解过js的垃圾回收机制嘛
 
-JavaScript内存管理有一个主要概念是可达性，“可达性” 值是那些以某种方式可访问或可用的值，它们被保证存储在内存中
-
-有一组基本的固有可达值，由于显而易见的原因无法删除，比如：本地函数的局部变量和参数，
+JavaScript内存管理有一个主要概念是可达性，“可达性” 值是那些以某种方式可访问或可用的值，它们被保证存储在内存中。有一组基本的固有可达值，由于显而易见的原因无法删除，比如：本地函数的局部变量和参数，全局变量，当前嵌套调用链上的其他函数的变量和参数，这些值被称为"根"，如果引用或引用链可以从根访问任何其他值，则认为该值是可访问的
 
 JavaScript在创建变量时自动进行了内存分配，并且在它们不使用时**"自动"**释放，释放的过程就被称为垃圾回收。
 
-
-
-现在各大浏览器通常用采用的垃圾回收有两种方法：标记清除、引用计数
+现在各大浏览器通常采用的垃圾回收有两种方法：标记清除、引用计数
 
 - 引用计数垃圾收集：把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。但是有一个限制是"无法处理循环引用问题"
 
 ```javascript
-var element = document.getElementById("some_element");
-var myObj =new Object();
+let element = document.getElementById("some_element");
+let myObj = new Object();
 myObj.element = element;
 element.someObject = myObj;
 // 变量myObj有一个element属性执行element，而变量element有一个名为someObject属性指回myObj，因为循环引用，引用计数法将没办法回收该内存
@@ -597,20 +593,77 @@ myObj.element = null;
 element.someObject =null;
 ```
 
-- 标记清除：是js中最常用的垃圾回收方式，把“对象是否不再需要”简化定义为“对象是否可以获得”，定期会执行以下的"垃圾回收"步骤：
-  - 垃圾回收器获取根并**“标记”**它们
+- 标记清除：是js中最常用的垃圾回收方式，把“对象是否不再需要”简化定义为“对象是否可以获得”，定期会执行以下的"垃圾回收"步骤（这正是标记清除算法垃圾收集的工作原理）：
+  - 首先垃圾回收器获取根并**“标记”**它们
   - 然后它访问并“标记”所有来自它们的引用
   - 接着它访问标记的对象并标记它们的引用(子孙代的引用)
   - 以此类推，直至有未访问的引用，此时进程中不能访问的对象将被认为是不可访问的
   - 除标记的对象外，其余对象将被删除
 
+## 21：对函数柯里化有了解嘛
 
+柯里化（Currying）是函数式编程的一个很重要的概念，将使用多个参数的一个函数转换成一系列使用一个参数的函数
 
+主要有三个作用：1. 参数复用**；**2. 提前返回；3. 延迟计算/运行
 
+- 参数复用
 
-* 问题准备：
-* 说一下js的垃圾回机制
-* 对函数柯里化有认识嘛
+```javascript
+// 举个栗子：正则验证字符串
 
+// 函数封装后
+function check(reg, txt) {
+    return reg.test(txt)
+}
 
+check(/\d+/g, 'test')       //false
+check(/[a-z]+/g, 'test')    //true
+
+// 需要复用第一个reg参数，Currying后，将两个参数分开，可以直接调用hasNumber，hasLetter等函数
+function curryingCheck(reg) {
+    return function(txt) {
+        return reg.test(txt)
+    }
+}
+
+let hasNumber = curryingCheck(/\d+/g)
+let hasLetter = curryingCheck(/[a-z]+/g)
+
+hasNumber('test1')      // true
+hasLetter('21212')      // false
+```
+
+- 提前返回
+
+```javascript
+// 比如：解决原生方法在现代浏览器和IE之间的兼容问题
+
+// 提前返回: 使用函数立即调用进行了一次兼容判断（部分求值），返回兼容的事件绑定方法
+// 延迟执行：返回新函数，在新函数调用兼容的事件方法。等待addEvent新函数调用，延迟执行
+const addEvent = (function() {
+    if(window.addEventListener) {
+        return function(ele, type, fn, isCapture) {
+            ele.addEventListener(type, fn, isCapture)
+        }
+    } else if(window.attachEvent) {
+        return function(ele, type, fn) {
+             ele.attachEvent("on" + type, fn)
+        }
+    }
+})()
+```
+
+- 延迟执行
+
+```javascript
+// js中bind实现机制正是Currying
+Function.prototype.bind = function (context) {
+    var _this = this
+    var args = Array.prototype.slice.call(arguments, 1)
+ 
+    return function() {
+        return _this.apply(context, args)
+    }
+}
+```
 
