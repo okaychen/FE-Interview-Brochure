@@ -6,7 +6,6 @@
 
 ## 计划
 
-{% hint style="info" %}
 🤤 主要面向对象：应届生求职--前端
 
 第一版预计完成
@@ -22,7 +21,6 @@
 Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 
 构建工具篇以前端工作流中的webpack为核心
-{% endhint %}
 
 ## 目录
 
@@ -38,11 +36,10 @@ Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 
 ## 正确使用姿势
 
-{% hint style="success" %}
-方案一：
+### Gitbook：
 
 Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
-{% endhint %}
+
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
@@ -53,8 +50,7 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
 > 那如果你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 ，这两好像没一点关系，我来帮你解决 👇
 
-{% hint style="success" %}
-方案二：
+### Github阅读：
 
 Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://github.com/okaychen/FE-Interview-Questions)
 
@@ -69,17 +65,10 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣，建议还是装个..
 
 那你又说了我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
-{% endhint %}
 
-{% hint style="success" %}
-终极方案：
+### 终极方案：
 
 为了让有个性的同学也看到这份前端面试小册，我推出了本次的终极方案
-{% endhint %}
-
-
-
-
 
 
 
