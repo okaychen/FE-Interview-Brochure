@@ -39,17 +39,54 @@ Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 ## 正确使用姿势
 
 {% hint style="success" %}
+方案一：
+
 Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 {% endhint %}
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
-<p align="center">
+{% tabs %}
+{% tab title="" %}
+![](.gitbook/assets/image%20%288%29.png)
+{% endtab %}
 
-  <img src=".gitbook/assets/image%20%287%29.png" width="300" alt="" />
-  <img src=".gitbook/assets/image%20%281%29" width="300" alt="" />
+{% tab title="Second Tab" %}
 
-</p>
+
+![](.gitbook/assets/image%20%2811%29.png)
+{% endtab %}
+{% endtabs %}
+
+> 那如果你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 ，这两好像没一点关系，我来帮你解决 👇
+
+{% hint style="success" %}
+方案二：
+
+Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://github.com/okaychen/FE-Interview-Questions)
+
+那你说我觉得你这点总结的不对或者有更好的建议，该咋办，很简单，你给我发个issue，我会第一时间跟进
+
+那我想下载到本地呢，打开你的git bash：
+
+— git clone [https://github.com/okaychen/FE-Interview-Questions.git](https://github.com/okaychen/FE-Interview-Questions.git)
+
+敲个回车这么简单（这里推荐一个markdown编辑器Typora）
+
+那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣，建议还是装个..
+
+那你又说了我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
+{% endhint %}
+
+{% hint style="success" %}
+终极方案：
+
+为了让有个性的同学也看到这份前端面试小册，我推出了本次的终极方案
+{% endhint %}
+
+
+
+
 
 
 
