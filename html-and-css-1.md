@@ -11,9 +11,9 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 不同浏览器的内核不同，所以渲染过程其中有部分细节有不一样，以webkit主流程为例：
 
-![](/media/okaychen/winE/Images/Blog/gitbook/201908050916272865.jpg)
+![](.gitbook/assets/201908050916272865%20%281%29.jpg)
 
-一篇很棒的文章(需科学上网)：[How Browser Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+一篇很棒的文章\(需科学上网\)：[How Browser Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
 
 > 作者有话说：浏览器解析渲染页面过程是一个复杂的过程，其中有不少的细节和规则，如果把上面分享的文章翻译成译文，至少有3～5页PDF左右，所以这里只能总结大致过程（作为面试回答【很可能让回答的尽可能详细】了解来说已经足够，更深入的了解可以好好读下上面那篇文章）
 
@@ -327,7 +327,7 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 </div>
 ```
 
-![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
+![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824%20%281%29.png)
 
 ## 15：说说你知道的清除浮动的方法，知道其中的原理嘛
 
