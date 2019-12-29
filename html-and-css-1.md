@@ -11,7 +11,7 @@ HTML解析构建DOM-&gt;CSS解析构建CSSOM树-&gt;根据DOM树和CSSOM树构�
 
 不同浏览器的内核不同，所以渲染过程其中有部分细节有不一样，以webkit主流程为例：
 
-![](https://github.com/okaychen/FE-Interview-Questions/tree/e3b7e047810b53e1847bb8e9edc8b5661793cb8f/media/okaychen/winE/Images/Blog/gitbook/201908050916272865.jpg)
+![](.gitbook/assets/201908050916272865%20%281%29.jpg)
 
 一篇很棒的文章\(需科学上网\)：[How Browser Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
 
