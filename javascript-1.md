@@ -1,6 +1,6 @@
 ---
 description: >-
-  JavaScript篇（第一个版本预计总结常见问题20个左右），JavaScript是应届求职过程的重中之重，既能体现对于基础的掌握，也会了解到应届生对于一门编程语言的熟练程度，以及是否能够揭开编程语言表层，对底层有一定的了解
+  JavaScript篇（第一个版本预计总结常见问题25个左右），JavaScript是应届求职过程的重中之重，既能体现对于基础的掌握，也会了解到应届生对于一门编程语言的熟练程度，以及是否能够揭开编程语言表层，对底层有一定的了解
 ---
 
 # JavaScript
@@ -127,7 +127,7 @@ function debounce(fn,delay){
 }
 ```
 
-## 5：介绍ES6你熟悉的几个新特性
+## 6：介绍ES6你熟悉的几个新特性
 
 * let，const声明变量
 * 解构赋值
@@ -136,7 +136,7 @@ function debounce(fn,delay){
 * 数组的新方法 -- map，reduce，filter
 * promise
 
-## 6：说说var，let，const的区别
+## 7：说说var，let，const的区别
 
 首先var相对`let/const`，后者可以使用块级作用域，var声明变量则存在函数作用域内（该域内存在变量提升）。`let/const`有一个暂时性死区的概念，即进入作用域创建变量到变量可以开始访问的一段时间。
 
@@ -156,7 +156,7 @@ const person = {
 person.name = 'Tom'
 ```
 
-## 7：数据类型有哪些，对symbol有了解嘛
+## 8：数据类型有哪些，对symbol有了解嘛
 
 基本数据类型：`string`、`number`、`Boolean`、`undefined`、`null`
 
@@ -182,7 +182,7 @@ ES6新增数据类型：`symbol`、`Map`、`Set`
 > * set是object里面的一种，set里无论原始值还是引用类型的值，重复的都只会保留一个
 > * Map可以允许任何类型作为对象的键，弥补了object只能使用字符串作为键（注意Map是ES6中的一种数据结构，区别于数组方法map）
 
-## 8：值类型和引用类型有哪些区别
+## 9：值类型和引用类型有哪些区别
 
 1. 值类型： 字符串`string`，数值`number`，布尔值`boolean`，`null`, `undefined`
 2. 引用类型： 对象 `Object`，数组`Array`，函数`Function`
@@ -201,7 +201,7 @@ ES6新增数据类型：`symbol`、`Map`、`Set`
 * 使用**`instanceof（）`**检测数据类型
 * 使用 `new()` 方法构造出的对象是引用型
 
-## 8：分别说一下数组中常用的方法
+## 10：分别说一下数组中常用的方法
 
 数组也是一种数据类型，类比数据类型的学习我们可以从其特性，增删改查，其他方法，支持的运算符七个方面来学习，可以明显提高效率
 
@@ -228,7 +228,7 @@ forEach() // 对数组的每一项运行给定函数，没有返回值
 
 ```
 
-## 8：对数组方法map和reduce方法的理解，区别在哪里
+## 11：对数组方法map和reduce方法的理解，区别在哪里
 
 map方法的调用者一般是数组，参数是一个callback函数，返回值是一个由原数组中每个元素执行callback函数得到的返回值组成的新数组
 
@@ -260,7 +260,7 @@ str.split('').reduce((res,cur)=>{
 // {a: 4, b: 2, c: 2, d: 1}
 ```
 
-## 9：对map和reduce实现的理解，能手写一下嘛
+## 12：对map和reduce实现的理解，能手写一下嘛
 
 数组方法map模拟实现：
 
@@ -289,7 +289,7 @@ Array.prototype._reduce = (callback, initialValue) => {
 }
 ```
 
-## 10：Ajax的概念，手写一下原生实现的思路
+## 13：Ajax的概念，手写一下原生实现的思路
 
 首先需要知道的是Ajax主要是通过`XMLHttpRequest`对象向服务器提出请求并处理响应，进行页面的局部更新，XMLHttpRequest对象常用的三大属性：`onreadystatechange`，`readyState`，`status`
 
@@ -318,7 +318,7 @@ xhr.open('GET','/EndPonint',true);
 xhr.send(null);
 ```
 
-## 11：有了解过fetch嘛，和XMLHttpRequest的区别在哪
+## 14：有了解过fetch嘛，和XMLHttpRequest的区别在哪
 
 XMLHttpRequest历史悠久，因为其API设计其实并不是很好，输入，输出，状态都在同一个接口管理，容易写出非常非常混乱的代码，Fetch API采取了一种新规范，用来取代XMLHttpReques，Fetch更现代化，更接近于未来，内部使用了Promise，用起来也更加简洁
 
@@ -331,7 +331,7 @@ fetch('./api/demo.json')
     });
     .catch((err) => {...});
 ```
-## 12：Promise的了解，手撕Promise\(Promise.all或者Promise.race\)
+## 15：Promise的了解，手撕Promise\(Promise.all或者Promise.race\)
 
 Promise是一种异步编程的解决方法，相比容易陷入回调地狱的回调函数，采用链式调用的方式更合理也更方便，Promise有三种状态：`pending`（进行中）、`fulfilled`（已成功）和`rejected`（已失败），接受一个作为函数作为参数，该函数有两个参数，分别是`resolve`和`reject`两个函数
 
@@ -403,7 +403,7 @@ Promise.prototype._all = interable => {
 }
 ```
 
-## 13：js为什么0.1+0.2不等于0.3
+## 16：js为什么0.1+0.2不等于0.3
 
 主要是因为JavaScript同样采用IEEE754标准，在64位中存储一个数字的有效数字形式
 
@@ -415,7 +415,7 @@ Promise.prototype._all = interable => {
 
 由于需要对求和结果规格化\(用有效数字表示\)，右规导致低位丢失，此时需对丢失的低位进行舍入操作，遵循IEEE754舍入规则，会有精度损失
 
-## 14：如何正确判断与使用this，箭头函数有没有自己的this指针
+## 17：如何正确判断与使用this，箭头函数有没有自己的this指针
 
 > this有四种绑定规则，默认绑定、隐式绑定、显示绑定、new 绑定，优先级由低到高
 >
@@ -427,7 +427,7 @@ Promise.prototype._all = interable => {
 * 箭头函数没有自己的this指针，它的this绑定取决于外层（函数或全局）作用域）
 * call，apply，bind在非箭头函数下修改this值（箭头函数下只传递参数），不管call , bind, apply多少次，函数的this永远由第一次的决定
 
-## 15：对闭包的了解及其应用场景
+## 18：对闭包的了解及其应用场景
 
 闭包是指有权访问另外一个函数作用域中的变量的函数.可以理解为\(**能够读取其他函数内部变量的函数**\)
 
@@ -499,7 +499,7 @@ for (let i=1; i<=5; i++) {
 }
 ```
 
-## 16：对eventloop事件循环机制的了解
+## 19：对eventloop事件循环机制的了解
 
 首先，JavaScript一大特点就是单线程，这样的设计让它在同一时间只做一件事；作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM，避免了复杂性，比如假设JavaScript有两个线程，那么在同一时间进行添加删除节点操作，为浏览器分辨以哪个线程为准带来困难，所以单线程是它作为浏览器脚本语言的优势，也是它的核心特征。
 
@@ -511,7 +511,7 @@ for (let i=1; i<=5; i++) {
 
 ![&#xFF08;&#x4E0A;&#x56FE;&#x8F6C;&#x5F15;&#x81EA;Philip Roberts&#x7684;&#x6F14;&#x8BB2;&#x300A;Help, I&apos;m stuck in an event-loop&#x300B;&#xFF09;&#xFF09;](http://www.chenqaq.com/assets/images/event.png)
 
-## 18：对宏任务和微任务的理解，微任务有哪些
+## 20：对宏任务和微任务的理解，微任务有哪些
 
 异步任务又分为宏任务（macrotask）和微任务（microtask），那么任务队列就有了宏任务队列和微任务队列，微任务总是在宏任务之前执行，也就是说：同步任务&gt;微任务&gt;宏任务，
 
@@ -533,11 +533,11 @@ for (let i=1; i<=5; i++) {
 | MutationObserver | ✅ | ❌ |
 | Promise.then catch finally | ✅ | ✅ |
 
-## 17：setTimeout用作倒计时为什么会产生误差
+## 21：setTimeout用作倒计时为什么会产生误差
 
 考察的其实是同一个概念，正因为setTimeout属于宏任务，那么如果当前 **执行栈** 所花费的时间大于 **定时器** 时间，那么定时器的回调在 **宏任务** 里，来不及去调用，所有这个时间会有误差
 
-## 16：对new的过程和原理的理解
+## 22：对new的过程和原理的理解
 
 JavaScript中new一个对象，我们需要了解主要发生了以下四步：
 
@@ -571,7 +571,7 @@ const _new = function(){
 }
 ```
 
-## 20：有了解过js的垃圾回收机制嘛
+## 23：有了解过js的垃圾回收机制嘛
 
 JavaScript内存管理有一个主要概念是可达性，“可达性” 值是那些以某种方式可访问或可用的值，它们被保证存储在内存中。有一组基本的固有可达值，由于显而易见的原因无法删除，比如：本地函数的局部变量和参数，全局变量，当前嵌套调用链上的其他函数的变量和参数，这些值被称为"根"，如果引用或引用链可以从根访问任何其他值，则认为该值是可访问的
 
@@ -600,7 +600,7 @@ element.someObject =null;
   - 以此类推，直至有未访问的引用，此时进程中不能访问的对象将被认为是不可访问的
   - 除标记的对象外，其余对象将被删除
 
-## 21：对函数柯里化有了解嘛
+## 24：对函数柯里化有了解嘛
 
 柯里化（Currying）是函数式编程的一个很重要的概念，将使用多个参数的一个函数转换成一系列使用一个参数的函数
 
