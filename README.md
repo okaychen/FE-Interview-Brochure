@@ -54,17 +54,17 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
 Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://github.com/okaychen/FE-Interview-Questions)
 
-那你说我觉得你这点总结的不对或者有更好的建议，该咋办，很简单，你给我发个issue，我会第一时间跟进
+> 那你说我觉得你这点总结的不对或者有更好的建议，该咋办，很简单，你给我发个issue，我会第一时间跟进
 
 那我想下载到本地呢，打开你的git bash：
-
-— git clone [https://github.com/okaychen/FE-Interview-Questions.git](https://github.com/okaychen/FE-Interview-Questions.git)
-
+```
+— git clone https://github.com/okaychen/FE-Interview-Questions.git
+```
 敲个回车这么简单（这里推荐一个markdown编辑器Typora）
 
-那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣，建议还是装个..
+> 那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣，建议还是装个..
 
-那你又说了我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
+> 那你又说了我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
 
 ### 终极方案：
 
