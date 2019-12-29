@@ -48,7 +48,7 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
   <img src=".gitbook/assets/image%20%2811%29.png" width="350" alt="" />
 </p>
 
-> 那如果你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 ，这两好像没一点关系，我来帮你解决 👇
+> 那你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 ，这两好像没一点关系，我来帮你解决 👇
 
 ### Github阅读：
 
@@ -64,7 +64,7 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 
 > 那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣，建议还是装个..
 
-> 那你又说了我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
+> 那你又说我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
 
 ### 终极方案：
 
