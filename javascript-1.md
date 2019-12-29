@@ -225,7 +225,6 @@ indexof // 返回指定位置的元素值或字符串，通过搜索值与下标
 every() // 如果每一项都为true，则返回true
 some() // 某一项返回true，则返回true
 forEach() // 对数组的每一项运行给定函数，没有返回值
-
 ```
 
 ## 11：对数组方法map和reduce方法的理解，区别在哪里
@@ -293,11 +292,11 @@ Array.prototype._reduce = (callback, initialValue) => {
 
 首先需要知道的是Ajax主要是通过`XMLHttpRequest`对象向服务器提出请求并处理响应，进行页面的局部更新，XMLHttpRequest对象常用的三大属性：`onreadystatechange`，`readyState`，`status`
 
-| 属性                 | 描述                                                         |
-| -------------------- | :----------------------------------------------------------- |
-| `onreadystatechange` | `readyState`属性的值发生改变，就会触发readystatechange事件   |
-| `readyState`         | 存有XMLHttpRequest的状态<br />0：请求未初始化<br />1：服务器连接已建立<br />2：请求已接收<br />3：请求处理中<br />4：请求已完成，且响应已就绪 |
-| `status`             | `status`属性为只读属性，表示本次请求所得到的HTTP状态码<br />200, OK，访问正常<br />301, Moved Permanently，永久移动<br />302, Move temporarily，暂时移动<br />304, Not Modified，未修改<br />307, Temporary Redirect，暂时重定向<br />401, Unauthorized，未授权<br />403, Forbidden，禁止访问<br />404, Not Found，未发现指定网址<br />500, Internal Server Error，服务器发生错误 |
+| 属性 | 描述 |
+| :--- | :--- |
+| `onreadystatechange` | `readyState`属性的值发生改变，就会触发readystatechange事件 |
+| `readyState` | 存有XMLHttpRequest的状态 0：请求未初始化 1：服务器连接已建立 2：请求已接收 3：请求处理中 4：请求已完成，且响应已就绪 |
+| `status` | `status`属性为只读属性，表示本次请求所得到的HTTP状态码 200, OK，访问正常 301, Moved Permanently，永久移动 302, Move temporarily，暂时移动 304, Not Modified，未修改 307, Temporary Redirect，暂时重定向 401, Unauthorized，未授权 403, Forbidden，禁止访问 404, Not Found，未发现指定网址 500, Internal Server Error，服务器发生错误 |
 
 ```javascript
 //Ajax原生简单实现
@@ -322,7 +321,7 @@ xhr.send(null);
 
 XMLHttpRequest历史悠久，因为其API设计其实并不是很好，输入，输出，状态都在同一个接口管理，容易写出非常非常混乱的代码，Fetch API采取了一种新规范，用来取代XMLHttpReques，Fetch更现代化，更接近于未来，内部使用了Promise，用起来也更加简洁
 
-```JavaScript
+```javascript
 fetch('./api/demo.json')
     .then((response) => {
         response.json().then((data) => {
@@ -331,6 +330,7 @@ fetch('./api/demo.json')
     });
     .catch((err) => {...});
 ```
+
 ## 15：Promise的了解，手撕Promise\(Promise.all或者Promise.race\)
 
 Promise是一种异步编程的解决方法，相比容易陷入回调地狱的回调函数，采用链式调用的方式更合理也更方便，Promise有三种状态：`pending`（进行中）、`fulfilled`（已成功）和`rejected`（已失败），接受一个作为函数作为参数，该函数有两个参数，分别是`resolve`和`reject`两个函数
@@ -541,7 +541,7 @@ for (let i=1; i<=5; i++) {
 
 JavaScript中new一个对象，我们需要了解主要发生了以下四步：
 
-1.创建一个空的对象 
+1.创建一个空的对象
 
 `let obj = { }`
 
@@ -560,12 +560,12 @@ JavaScript中new一个对象，我们需要了解主要发生了以下四步：
 const _new = function(){
     let obj = new Object();
     let _constructor = [].shift.call(arguments);
-    
+
     // 使用中间函数来维护原型关系
     const F = function(){};
     F.prototype = _constructor.prototype;
     obj = new F();
-    
+
     let res = _constructor.apply(obj,arguments);
     return typeof res === 'object' ? res || obj : obj;
 }
@@ -579,7 +579,7 @@ JavaScript在创建变量时自动进行了内存分配，并且在它们不使�
 
 现在各大浏览器通常采用的垃圾回收有两种方法：标记清除、引用计数
 
-- 引用计数垃圾收集：把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。但是有一个限制是"无法处理循环引用问题"
+* 引用计数垃圾收集：把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。但是有一个限制是"无法处理循环引用问题"
 
 ```javascript
 let element = document.getElementById("some_element");
@@ -593,12 +593,12 @@ myObj.element = null;
 element.someObject =null;
 ```
 
-- 标记清除：是js中最常用的垃圾回收方式，把“对象是否不再需要”简化定义为“对象是否可以获得”，定期会执行以下的"垃圾回收"步骤（这正是标记清除算法垃圾收集的工作原理）：
-  - 首先垃圾回收器获取根并**“标记”**它们
-  - 然后它访问并“标记”所有来自它们的引用
-  - 接着它访问标记的对象并标记它们的引用(子孙代的引用)
-  - 以此类推，直至有未访问的引用，此时进程中不能访问的对象将被认为是不可访问的
-  - 除标记的对象外，其余对象将被删除
+* 标记清除：是js中最常用的垃圾回收方式，把“对象是否不再需要”简化定义为“对象是否可以获得”，定期会执行以下的"垃圾回收"步骤（这正是标记清除算法垃圾收集的工作原理）：
+  * 首先垃圾回收器获取根并**“标记”**它们
+  * 然后它访问并“标记”所有来自它们的引用
+  * 接着它访问标记的对象并标记它们的引用\(子孙代的引用\)
+  * 以此类推，直至有未访问的引用，此时进程中不能访问的对象将被认为是不可访问的
+  * 除标记的对象外，其余对象将被删除
 
 ## 24：对函数柯里化有了解嘛
 
@@ -606,7 +606,7 @@ element.someObject =null;
 
 主要有三个作用：1. 参数复用**；**2. 提前返回；3. 延迟计算/运行
 
-- 参数复用
+* 参数复用
 
 ```javascript
 // 举个栗子：正则验证字符串
@@ -633,7 +633,7 @@ hasNumber('test1')      // true
 hasLetter('21212')      // false
 ```
 
-- 提前返回
+* 提前返回
 
 ```javascript
 // 比如：解决原生方法在现代浏览器和IE之间的兼容问题
@@ -653,14 +653,14 @@ const addEvent = (function() {
 })()
 ```
 
-- 延迟执行
+* 延迟执行
 
 ```javascript
 // js中bind实现机制正是Currying
 Function.prototype.bind = function (context) {
     var _this = this
     var args = Array.prototype.slice.call(arguments, 1)
- 
+
     return function() {
         return _this.apply(context, args)
     }
