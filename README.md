@@ -46,17 +46,10 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
-{% tabs %}
-
-{% tab title="" %}
-![](.gitbook/assets/image%20%288%29.png)
-{% endtab %}
-
-{% tab title="Second Tab" %}
-![](.gitbook/assets/image%20%2811%29.png)
-{% endtab %}
-
-{% endtabs %}
+<p align="center">
+  <img src=".gitbook/assets/image%20%288%29.png" width="350" alt="" />
+  <img src=".gitbook/assets/image%20%2811%29.png" width="350" alt="" />
+</p>
 
 > 那如果你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 ，这两好像没一点关系，我来帮你解决 👇
 
