@@ -44,9 +44,14 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
 ![](.gitbook/assets/image%20%2812%29.png)
 
-![](.gitbook/assets/image%20%287%29.png)
+<p align="center">
 
-![](.gitbook/assets/image%20%281%29.png)
+  <img src=".gitbook/assets/image%20%287%29.png" width="300" alt="" />
+  <img src=".gitbook/assets/image%20%281%29" width="300" alt="" />
+
+</p>
+
+
 
 ## License
 
