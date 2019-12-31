@@ -10,8 +10,8 @@
 
 第一版预计完成
 
-* [ ] HTML/CSS Q20       
-* [ ] JavaScript Q25        
+* [x] HTML/CSS Q20       
+* [x] JavaScript Q25
 * [ ] HTTP/网络篇 Q20   
 * [ ] Vue篇 Q15-20                    
 * [ ] 安全篇 Q5-10               
@@ -26,9 +26,9 @@
 
 | 篇章 | 状态 |
 | :---: | :---: |
-| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | 😀 部分完善 |
-| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/JavaScript.md) | 😀部分完善 |
-| [网络篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/advanced/network.md) | 😂 待完善 |
+| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | 😀 已完善[2019年12月31日] |
+| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/JavaScript.md) | 😀已完善[2019年12月31日] |
+| [网络篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/advanced/network.md) | 😂 部分完善 |
 | Vue篇 | 🤔 待添加 |
 | 算法篇 | 🤔 待添加 |
 | 安全篇 | 🤔 待添加 |
@@ -58,7 +58,7 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 
 那我想下载到本地呢，打开你的git bash：
 ```
-— git clone https://github.com/okaychen/FE-Interview-Questions.git
+- git clone https://github.com/okaychen/FE-Interview-Questions.git
 ```
 敲个回车这么简单（这里推荐一个markdown编辑器Typora）
 
