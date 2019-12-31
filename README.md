@@ -4,37 +4,27 @@
 
 [Gitbook看更方便哟～😋](https://docs.chenqaq.com/)
 
-## 计划
+## 计划&状态
 
 🤤 主要面向对象：应届生求职--前端
 
-第一版预计完成
-
-* [x] HTML/CSS Q20       
-* [x] JavaScript Q25
-* [ ] HTTP/网络篇 Q20   
-* [ ] Vue篇 Q15-20                    
-* [ ] 安全篇 Q5-10               
-* [ ] 算法篇 Q10               
-* [ ] 构建工具篇 Q5-10       
+| 篇章 | 第一版预计完成 | 状态 |
+| :---: | :---: | :---: |
+| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | Q20 | 😀 已完善[2019年12月31日] |
+| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/JavaScript.md) | Q25 | 😀已完善[2019年12月31日] |
+| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/advanced/network.md) | Q20 | 😂 部分完善 |
+| Vue篇 | Q15 | 🤔 待添加 |
+| 算法篇 | Q10 | 🤔 待添加 |
+| 安全篇 | Q5-10 | 🤔 待添加 |
+| 构建工具篇 | Q5-10 | 🤔 待添加 |
 
 > Vue篇以Vue为主的一些框架问题，后面会考虑加上React
-
+>
 > 构建工具篇以前端工作流中的webpack为核心
+>
+> 面试官一般都会根据回答进行追问，所以小册总结上下几个问题，一般具有连贯性
 
-## 目录
-
-| 篇章 | 状态 |
-| :---: | :---: |
-| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md) | 😀 已完善[2019年12月31日] |
-| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/JavaScript.md) | 😀已完善[2019年12月31日] |
-| [网络篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/advanced/network.md) | 😂 部分完善 |
-| Vue篇 | 🤔 待添加 |
-| 算法篇 | 🤔 待添加 |
-| 安全篇 | 🤔 待添加 |
-| 构建工具篇 | 🤔 待添加 |
-
-## 正确使用姿势
+## 使用姿势
 
 ### Gitbook：
 
@@ -50,7 +40,7 @@ Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
 > 那你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 这两好像没一点关系，我来帮你解决 👇
 
-### Github阅读：
+### Github：
 
 Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://github.com/okaychen/FE-Interview-Questions)
 
@@ -63,12 +53,12 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 敲个回车这么简单（这里推荐一个markdown编辑器Typora）
 
 > 那你说git我也没有装呀，我太难了，我是不是不适合学前端🤣建议还是装个..
-
+>
 > 那你又说我就不想装，好，有个性我喜欢，你遇到了我，我帮你解决👇 
 
 ### 终极方案：
 
-为了让有个性的同学也看到这份前端面试小册，我推出了本次的终极方案
+为了让有个性的同学也看到这份前端面试小册，我推出了方案C
 
 
 ## License
