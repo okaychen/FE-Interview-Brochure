@@ -1,16 +1,16 @@
 # 介绍
 
-互联网发展迅猛之余也伴随着互联网寒冬，行业不景气这样的词，等毕业季去各个求职网站投简历，去各个人才市场找机会，才发现四处碰壁，作为应届求职者更需要打好基础，明确发展规划，跟上行业步伐。下面是本人2019年秋招前端面试经历，结合个人博客和牛油们面经中的高频问题以及行业前辈们复习资料的综合整理，包含基础篇、VUE篇、构建工具篇、网络篇、安全篇、算法篇，欢迎交流斧正。希望大家在毕业季都能一帆风顺，从容斩获OFFER :100:
+互联网发展迅猛之余也伴随着互联网寒冬，行业不景气这样的词，等毕业季去各个求职网站投简历，去各个人才市场找机会，才发现四处碰壁，作为应届求职者更需要打好基础，明确发展规划，跟上行业步伐。下面是本人2019年秋招前端面试经历，结合个人博客和牛油们面经中的高频问题以及行业前辈们复习资料的综合整理，包含基础篇、VUE篇、构建工具篇、网络篇、安全篇、算法篇，欢迎交流斧正。希望大家在毕业季都能一帆风顺，从容斩获OFFER
 
 ## 计划&状态
 
-🤤 主要面向对象：应届生求职--前端 
+🤤 主要面向对象：应届生求职--前端
 
 | 篇章 | 第一版预计完成 | 状态 |
 | :---: | :---: | :---: |
-| [HTML&CSS](https://github.com/okaychen/FE-Interview-Brochure/blob/master/html-and-css.md) | Q20 | 😀 已完善\[2019年12月31日\] |
-| [JavaScript](https://github.com/okaychen/FE-Interview-Brochure/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
-| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Brochure/blob/master/http.md) | Q20 | 😂 部分完善 |
+| [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/html-and-css.md) | Q20 | 😀 已完善\[2019年12月31日\] |
+| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
+| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q20 | 😂 部分完善 |
 | Vue篇 | Q15 | 🤔 待添加 |
 | 算法篇 | Q10 | 🤔 待添加 |
 | 安全篇 | Q5-10 | 🤔 待添加 |
@@ -52,9 +52,13 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 
 ### PDF：
 
-为了让有个性的同学也看到这份前端面试小册（总结不易，为了骗星我真是拼了 :star_struck: 斜眼笑），我推出了方案C
+为了让有个性的同学也看到这份前端面试小册，我推出了方案C
 
-我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Brochure/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
+我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Questions/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
+
+> 总结不易，希望这本前端面试小册子于我于大家都能受益
+>
+> PS：为了骗星我真是什么话都说的出来 （斜眼笑）🤪
 
 ## License
 
