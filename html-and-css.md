@@ -341,7 +341,7 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 </div>
 ```
 
-![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824%20%281%29.png)
+![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
 
 ## 说说你知道的清除浮动的方法，知道其中的原理嘛
 
@@ -385,13 +385,13 @@ css sprits又名雪碧图，也叫css精灵，开发人员会将很多小图标�
 
 优点是：
 
-- 减少加载多张图片的HTTP请求数
-- 可以提前加载资源
+* 减少加载多张图片的HTTP请求数
+* 可以提前加载资源
 
 缺点是：
 
-- 维护成本较高，需要改动这张合并的图片
-- 加载优势在http2之后不复存在，http2采用多路复用，多张图片也可以重复使用一个连接
+* 维护成本较高，需要改动这张合并的图片
+* 加载优势在http2之后不复存在，http2采用多路复用，多张图片也可以重复使用一个连接
 
 ## 说一下前端的几种存储方式
 
@@ -399,7 +399,8 @@ cookie，localstorage，sessionstorage，IndexedDB
 
 （追问）这些方式的区别是什么，分别介绍一下：
 
-- cookie：HTML5标准前本地存储主要方式，请求头带着数据，缺点是大小只有4k左右，并且自动请求头加入cookie浪费流量，每个domain限制20个cookie，使用起来也麻烦需要自行封装
-- localstorage：HTML5标准后加入，以键值对（key-value）方式存储，永久存储，永不失效，除非手动删除，IE8+支持，每个域名限制5M
-- sessionstorage：和localstorage操作方法一样，区别在于sessionstorage在关闭页面后即被清空，刷新不会清空，但是不能在所有同源窗口中共享，是会话级别的存储方式
-- IndexedDB：被纳入HTML5标准的数据库存储方案，它是一个NoSql数据库，用键值对进行存储，可以快速读取操作，适合web场景和JavaScript操作
+* cookie：HTML5标准前本地存储主要方式，请求头带着数据，缺点是大小只有4k左右，并且自动请求头加入cookie浪费流量，每个domain限制20个cookie，使用起来也麻烦需要自行封装
+* localstorage：HTML5标准后加入，以键值对（key-value）方式存储，永久存储，永不失效，除非手动删除，IE8+支持，每个域名限制5M
+* sessionstorage：和localstorage操作方法一样，区别在于sessionstorage在关闭页面后即被清空，刷新不会清空，但是不能在所有同源窗口中共享，是会话级别的存储方式
+* IndexedDB：被纳入HTML5标准的数据库存储方案，它是一个NoSql数据库，用键值对进行存储，可以快速读取操作，适合web场景和JavaScript操作
+
