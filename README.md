@@ -52,9 +52,9 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 
 ### PDF：
 
-为了让有个性的同学也看到这份前端面试小册，我推出了方案C
+为了让有个性的同学也看到这份前端面试小册（总结不易，为了骗星我真是拼了 :star_struck: 斜眼笑），我推出了方案C
 
-我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Questions/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
+我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Brochure/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
 
 ## License
 
