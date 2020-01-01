@@ -186,8 +186,6 @@ b() // 1
 
 然后会是执行阶段，逐行执行造成了打印出a是undefined
 
-
-
 ## 数据类型有哪些，对symbol有了解嘛
 
 基本数据类型：`string`、`number`、`Boolean`、`undefined`、`null`
@@ -698,3 +696,4 @@ Function.prototype.bind = function (context) {
     }
 }
 ```
+

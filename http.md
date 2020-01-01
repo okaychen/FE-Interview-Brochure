@@ -12,7 +12,7 @@ description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左
 
 地址栏输入URL后-&gt;DNS将域名解析成IP地址-&gt;建立TCP连接-&gt;发送HTTP请求-&gt;服务器处理请求并返回HTTP报文-&gt;浏览器解析渲染页面
 
-#### 浏览器解析渲染过程，见[HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E8%BF%87%E7%A8%8B)
+### 浏览器解析渲染过程，见[HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E8%BF%87%E7%A8%8B)
 
 ## DNS--解析顺序&递归查询和迭代查询
 
