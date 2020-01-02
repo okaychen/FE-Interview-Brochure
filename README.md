@@ -43,7 +43,7 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Questions](https://gith
 那我想下载到本地呢，打开你的git bash：
 
 ```text
-- git clone https://github.com/okaychen/FE-Interview-Questions.git
+- git clone https://github.com/okaychen/FE-Interview-Brochure.git
 ```
 
 敲个回车这么简单（这里推荐一个markdown编辑器Typora）
