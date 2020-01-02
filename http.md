@@ -1,18 +1,16 @@
 ---
-description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左右）
+description: HTTP/浏览器篇（第一个版本预计总结常见问题15个左右）
 ---
 
 # HTTP/浏览器
 
 ## 从地址栏输入URL到呈现页面--浏览器解析渲染页面过程
 
-> 常规问题，对于基本网络原理和浏览器渲染过程的了解
-
 总体来说过程如下:
 
 地址栏输入URL后-&gt;DNS将域名解析成IP地址-&gt;建立TCP连接-&gt;发送HTTP请求-&gt;服务器处理请求并返回HTTP报文-&gt;浏览器解析渲染页面
 
-### 浏览器解析渲染过程，见[HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/interview/foundation/basis.md#1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E8%BF%87%E7%A8%8B)
+浏览器解析渲染过程，见[HTML&CSS](https://github.com/okaychen/FE-Interview-Brochure/blob/master/html-and-css.md#htmlcss)
 
 ## DNS--解析顺序&递归查询和迭代查询
 
@@ -29,9 +27,28 @@ description: HTTP/浏览器篇（第一个版本预计总结常见问题10个左
 
 因为服务端收到SYN建连报文后，可以把ACK报文和SYN报文放在一起发送。但是当关闭连接的时候，当对方收到FIN报文通知时，仅仅表示对方已经无数据发送给你了，但未必你已经发送完全部数据，这时就不能马上关闭socket，所以释放连接过程SYN包和ACK包要分开发送。
 
+## HTTP方法知道哪些，GET和POST区别有哪些
+
+HTTP1.0定义了三种请求方法，GET，POST和HEAD方法
+HTTP1.1新增六种请求方法：OPTIONS，PUT，PATCH，DELETE，TRACH和CONNECT
+
+GET和POST区别主要从三方面讲即可：表现形式，传输数据大小，安全性
+
+首先表现形式上：GET请求的数据会附加在URL后面，以?分割多参数用&连接，由于URL采用ASCII编码，所以非ASCII字符会先编码在传输，可缓存；POST请求会把请求的数据放在请求体中，不可缓存
+
+传输数据大小：对于GET请求，HTTP规范没有对URL长度进行限制，但是不同浏览器对URL长度加以限制，所以GET请求时，传输数据会受到URL长度的限制；POST不是URL传值，理论上无限制，但各个服务器一般会对POST传输数据大小进行限制
+
+安全性：相比URL传值，POST利用请求体传值安全性更高
+
+> PS：还有一种GET产生一个数据包，POST产生两个数据包的说法可答可不答，并不是所有浏览器如此，铺展开解释来说就是：对GET请求，浏览器会把请求头和data一起发送，服务器响应200（返回数据），对于POST请求，浏览器会先发送header，服务器响应100后继续，浏览器再发送data，服务器响应200
+
+## HTTP建立持久连接的意义
+
+HTTP持久连接也称作HTTP keep-alive，使用同一个TCP连接发送和接收多个HTTP请求，是HTTP1.1的新特性，HTTP1.1默认所有连接都是持久连接。在HTTP1.0，使用非持久连接，每个TCP连接只用于传输一个请求和响应，没有官方的keepalive操作，如果浏览器支持通常在请求和响应头中加上`Connection: Keep-Alive`
+
+那么由于同时打开的TCP连接减少，可以减少内存和CPU的占用；其次之后也无需再次握手，也减少了后续请求的延迟
+
 > 问题准备
->
-> * HTTP方法有哪些，这些方法的作用，get和post的区别知道的有哪些
 > * HTTP建立持久连接的意义
 > * HTTP2相比HTTP1的优势和特点
 > * HTTP相比1.0相比1.1的区别有哪些
