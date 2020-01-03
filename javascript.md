@@ -437,7 +437,7 @@ Promise.prototype._all = interable => {
 
 主要是因为JavaScript同样采用IEEE754标准，在64位中存储一个数字的有效数字形式
 
-![](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67.png)
+![](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/js_ieee754.png)
 
 第0位表示符号位，0表示整数1表示负数，第1~11位存储指数部分，第12~63位存小数部分；
 
@@ -539,7 +539,7 @@ for (let i=1; i<=5; i++) {
 
 主线程从任务队列中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为Event Loop（事件循环）
 
-![&#xFF08;&#x4E0A;&#x56FE;&#x8F6C;&#x5F15;&#x81EA;Philip Roberts&#x7684;&#x6F14;&#x8BB2;&#x300A;Help, I&apos;m stuck in an event-loop&#x300B;&#xFF09;&#xFF09;](http://www.chenqaq.com/assets/images/event.png)
+![](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/event.png)
 
 ## 对宏任务和微任务的理解，微任务有哪些
 

@@ -10,15 +10,15 @@
 | :---: | :---: | :---: |
 | [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/html-and-css.md) | Q20 | 😀 已完善\[2019年12月31日\] |
 | [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
-| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😂 部分完善 |
-| Vue篇 | Q15 | 🤔 待添加 |
+| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😂 已完善[2020年1月4日] |
+| Vue篇 | Q15 | 🤔 正在添加 |
 | 算法篇 | Q10 | 🤔 待添加 |
 | 安全篇 | Q5-10 | 🤔 待添加 |
 | 构建工具篇 | Q5-10 | 🤔 待添加 |
 
 > Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 >
-> 构建工具篇以前端工作流中的webpack为核心
+> 构建工具篇以前端自动化构建中的webpack为核心
 >
 > 面试官一般都会根据回答进行追问，所以小册总结上下几个问题一般具有连贯性
 >
@@ -30,7 +30,7 @@
 
 Gitbook：[docs.chenqaq.com](https://docs.chenqaq.com/)
 
-![](.gitbook/assets/image%20%2812%29.png)
+![show](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/image.png)
 
 > 那你说Gitbook国内访问比较慢我也不能科学上网，我是不是不适合学前端 🤣 这两好像没一点关系，我来帮你解决 👇
 

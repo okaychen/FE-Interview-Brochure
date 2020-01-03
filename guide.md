@@ -4,7 +4,7 @@ description: 应届生找一份前端或者互联网其他行业工作我们需�
 
 # 导读
 
-![banner](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/tag.jpg)
+![banner](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/tag.jpg)
 
 * 大学或者研究生应尽早设立目标，在相对自由的氛围里找到自己真正热爱的东西
 * 提高自身专业知识度和综合素质，增加人生阅历
