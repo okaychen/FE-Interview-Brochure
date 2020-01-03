@@ -437,7 +437,7 @@ Promise.prototype._all = interable => {
 
 主要是因为JavaScript同样采用IEEE754标准，在64位中存储一个数字的有效数字形式
 
-![](https://upload-images.jianshu.io/upload_images/16299591-8bfb445d26370aa4.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67.png)
 
 第0位表示符号位，0表示整数1表示负数，第1~11位存储指数部分，第12~63位存小数部分；
 

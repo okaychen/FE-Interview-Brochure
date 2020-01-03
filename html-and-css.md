@@ -122,9 +122,9 @@ Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，
 
 ## 说说对两种盒模型的理解
 
-标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin [![](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)
+标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin [![](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)](https://camo.githubusercontent.com/11f03b0d6118eea403a33fe2d64205ad66256e3f/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c312e706e67)
 
-怪异盒模型，IE5.X 和 6 在怪异模式中使用自己的非标准模型，盒子的总宽度和高度是包含内边距padding和边框border宽度在内的：盒子总宽度/高度=width/height + margin = width/height + margin; [![](https://camo.githubusercontent.com/fe676305e5f72b3e682664a683697eac68e0eb37/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)](https://camo.githubusercontent.com/fe676305e5f72b3e682664a683697eac68e0eb37/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)
+怪异盒模型，IE5.X 和 6 在怪异模式中使用自己的非标准模型，盒子的总宽度和高度是包含内边距padding和边框border宽度在内的：盒子总宽度/高度=width/height + margin = width/height + margin; [![](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)](https://camo.githubusercontent.com/fe676305e5f72b3e682664a683697eac68e0eb37/687474703a2f2f7777772e6368656e7161712e636f6d2f6173736574732f696d616765732f626f782d6d6f64656c322e706e67)
 
 ```css
 box-sizing : content-box || border-box || inherit;
@@ -343,7 +343,7 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 </div>
 ```
 
-![](.gitbook/assets/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
+![](/media/okaychen/winE/FEE/GitHub/clone-mine/CDN/brochure/image/shen-du-jie-tu-xuan-ze-qu-yu-20191216161824.png)
 
 ## 说说你知道的清除浮动的方法，知道其中的原理嘛
 

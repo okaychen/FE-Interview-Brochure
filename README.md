@@ -10,7 +10,7 @@
 | :---: | :---: | :---: |
 | [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/html-and-css.md) | Q20 | 😀 已完善\[2019年12月31日\] |
 | [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
-| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q20 | 😂 部分完善 |
+| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😂 部分完善 |
 | Vue篇 | Q15 | 🤔 待添加 |
 | 算法篇 | Q10 | 🤔 待添加 |
 | 安全篇 | Q5-10 | 🤔 待添加 |
@@ -20,9 +20,9 @@
 >
 > 构建工具篇以前端工作流中的webpack为核心
 >
-> 面试官一般都会根据回答进行追问，所以小册总结上下几个问题，一般具有连贯性；
+> 面试官一般都会根据回答进行追问，所以小册总结上下几个问题一般具有连贯性
 >
-> PS：其次也正是因为是面试小册，有些问题只是总结出较核心概念，比如浏览器解析渲染页面的过程，其实是一个很细的过程，其中滋味还需花时间细品；另外我也有意愿学习并再次总结这些问题，小册结束之后我会开始这个计划；在这给自己定下一个大目标吧，未来十年我对待技术和写作会从一始终，坚持持续和大家分享，我们一起来见证
+> 其次也正是因为是面试小册，有些问题只是总结出较核心概念，比如浏览器解析渲染页面的过程，其实是一个很细的过程，其中滋味还需花时间细品；另外我也有意愿学习并再次总结这些问题，小册结束之后我会开始这个计划；在这给自己定下一个目标吧，未来十年我对待技术和写作从一始终，会坚持持续和大家分享，我们一起来见证
 
 ## 使用姿势
 
