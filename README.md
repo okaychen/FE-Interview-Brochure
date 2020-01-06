@@ -12,8 +12,8 @@
 | [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
 | [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😂 已完善[2020年1月4日] |
 | Vue篇 | Q15 | 🤔 正在添加 |
-| 算法篇 | Q10 | 🤔 待添加 |
-| 安全篇 | Q5-10 | 🤔 待添加 |
+| 安全篇 | Q10 | 🤔 正在添加 |
+| 算法篇 | Q5-10 | 😀 已完善[2020年1月6日] |
 | 构建工具篇 | Q5-10 | 🤔 待添加 |
 
 > Vue篇以Vue为主的一些框架问题，后面会考虑加上React
@@ -42,8 +42,8 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Brochure](https://githu
 
 那我想下载到本地呢，打开你的git bash：
 
-```text
-- git clone https://github.com/okaychen/FE-Interview-Brochure.git
+```
+git clone https://github.com/okaychen/FE-Interview-Brochure.git
 ```
 
 敲个回车这么简单（这里推荐一个markdown编辑器Typora）
