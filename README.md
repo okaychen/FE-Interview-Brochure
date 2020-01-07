@@ -9,12 +9,12 @@
 | 篇章 | 第一版预计完成 | 状态 |
 | :---: | :---: | :---: |
 | [HTML&CSS](https://github.com/okaychen/FE-Interview-Questions/blob/master/html-and-css.md) | Q20 | 😀 已完善\[2019年12月31日\] |
-| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀已完善\[2019年12月31日\] |
-| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😂 已完善[2020年1月4日] |
+| [JavaScript](https://github.com/okaychen/FE-Interview-Questions/blob/master/javascript.md) | Q25 | 😀 已完善\[2019年12月31日\] |
+| [HTTP&浏览器](https://github.com/okaychen/FE-Interview-Questions/blob/master/http.md) | Q15 | 😀 已完善[2020年1月4日] |
 | Vue篇 | Q15 | 🤔 正在添加 |
 | 安全篇 | Q10 | 🤔 正在添加 |
 | 算法篇 | Q5-10 | 😀 已完善[2020年1月6日] |
-| 构建工具篇 | Q5-10 | 🤔 待添加 |
+| 构建工具篇 | Q5-10 | 😀 已完善[2020年1月7日] |
 
 > Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 >
