@@ -18,6 +18,7 @@
 
 - 反射型
 反射性通常发生在URL地址的参数中，常用来窃取客户端的cookie或进行钓鱼欺骗，经常在网站的搜索栏，跳转的地方被注入
+
 ```html
 <!--比如-->
 http://www.test.com/search.php?key="><script>alert("XSS")</script>
@@ -32,12 +33,15 @@ http://www.test.com/search.php?key="><script>alert("XSS")</script>
 xss攻击有两大要素：攻击者提交恶意代码，浏览器执行恶意代码
 
 - 针对cookie劫持，攻击者向漏洞页面写入恶意代码获取cookie，可以通过防止cookie会话劫持来防范，一般要在设置cookie时加HttpOnly，来禁止意外注入站点的恶意js代码操作Cookie造成xss攻击
+
 ```JavaScript
 // node设置httponly
 'Set-Cookie' : 'SSID=EqAc1D; Expires=Wed; HttpOnly'
 ```
 - 提高攻击门槛：(XSS Filter)针对用户提交的数据进行有效的验证，只接受我们规定的长度或内容的提交，过滤掉其他的输入内容 或者 将特殊字符输出编码(xss Escape)
+
   ![xx](https://www.chenqaq.com/assets/images/xss-encode02.png)
+
 - xss漏洞检测poc：通过漏洞检测代码，完成自测，最小化被攻击风险
 
 ```html
