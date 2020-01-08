@@ -110,7 +110,7 @@ module.exports = {
 
 webpack热更新（Hot Module Replacement），缩写为HMR，实现了不用刷新浏览器而将新变更的模块替换掉旧的模块，原理如下：
 
-![图片来自Webpack HMR 原理解析](https://pic1.zhimg.com/80/v2-f7139f8763b996ebfa28486e160f6378_hd.jpg)
+![图片来自Webpack HMR 原理解析](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.2/brochure/image/v2-f7139f8763b996ebfa28486e160f6378_hd.jpg)
 
 server端和client端都做了处理：
 
@@ -125,13 +125,7 @@ server端和client端都做了处理：
 
 ## webpack的构建流程(原理)是怎样的
 
-首先需要知道的webpack几个基础的概念
-- entry：入口，webpack构建第一步从entry开始
-- module：webpack会从entry开始，递归找出所有依赖的模块
-- chunk：代码块，一个chunk由多个模块组合而成，用于代码合并与分割
-- loader和plugin，见上面两者不同
-
-webpack的运行流程是一个串行的过程，从启动到结束依次执行如下：
+webpack的构建流程是一个串行的过程，从启动到结束依次执行如下：
 
 - ① 初始化参数：从配置文件和shell语句中读取与合并参数，得出最终的参数
 - ② 开始编译：用上一步得到的参数初始化 Compiler对象，加载所有配置的插件，通过执行对象的run方法开始执行编译
