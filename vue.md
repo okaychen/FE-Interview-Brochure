@@ -156,7 +156,7 @@ hash("#")符号的本来作用是加在URL指示网页中的位置：
 http://www.example.com/index.html#print
 ```
 
-#本身以及它后面的字符称之为hash，可通过window.location.hash属性读取，hash虽然在url中，但是却不会被包含在http请求中，也不会重新加载页面，它用来指导浏览器动作
+`#`本身以及它后面的字符称之为hash，可通过window.location.hash属性读取，hash虽然在url中，但是却不会被包含在http请求中，也不会重新加载页面，它用来指导浏览器动作
 
 - History 模式
 
