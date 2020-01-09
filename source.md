@@ -23,16 +23,16 @@
 
 | 开发社区 | 工具资源 |
 | :--- | :--- |
-| [掘金](https://juejin.im/timeline) | [typora](https://www.typora.io/)\(markdown编辑器\) |
-| [v2ex](https://www.v2ex.com/) | [ProcessOn](https://www.processon.com/)\(在线作图\) |
-| [jsTips](http://www.jstips.co/) | [FeHeler](https://www.baidufe.com/fehelper/index/index.html)\(chrome插件，功能强大\) |
-| [Github](https://github.com/) | [Fiddler](https://www.telerik.com/fiddler)\(抓包调试工具\) |
-| [CNode](https://cnodejs.org/) | [CodePon](https://codepen.io/)\(在线代码测试工具\) |
-|  | [智图](https://zhitu.isux.us/)\(图片在线压缩，制作webp\) |
-|  | [JSRun](http://jsrun.pro/)\(在线代码编辑器\) |
-| [infoQ](https://www.infoq.cn/) | [Icomoon](https://icomoon.io/)\(字体图标制作\) |
-| [segmentfault](https://segmentfault.com/) | [Iconfont](https://www.iconfont.cn/)\(阿里矢量图库\) |
-| [stackoverflow](https://stackoverflow.com/) | [墨刀](https://modao.cc/)\(产品设计\) |
+| [掘金](https://juejin.im/timeline) | [typora (markdown编辑器)](https://www.typora.io/) |
+| [v2ex](https://www.v2ex.com/) | [ProcessOn (在线作图)](https://www.processon.com/) |
+| [jsTips](http://www.jstips.co/) | [FeHeler (chrome插件，功能强大)](https://www.baidufe.com/fehelper/index/index.html) |
+| [Github](https://github.com/) | [Fiddler (抓包调试工具)](https://www.telerik.com/fiddler) |
+| [CNode](https://cnodejs.org/) | [CodePon (在线代码测试工具)](https://codepen.io/) |
+|  | [智图 (图片在线压缩，制作webp)](https://zhitu.isux.us/) |
+|  | [JSRun (在线代码编辑器)](http://jsrun.pro/) |
+| [infoQ)](https://www.infoq.cn/) | [Icomoon (字体图标制作)](https://icomoon.io/) |
+| [segmentfault](https://segmentfault.com/) | [Iconfont (阿里矢量图库)](https://www.iconfont.cn/) |
+| [stackoverflow](https://stackoverflow.com/) | [墨刀 (产品设计)](https://modao.cc/) |
 | [smashingmagazine](https://www.smashingmagazine.com/) | [颜色搭配表](http://rainyin.com/307.html) |
 | [开发者头条](https://toutiao.io/posts/hot/7) | [草料二维码](https://cli.im/) |
 | [前端乱炖](http://www.html-js.com/) | [Github emoji](https://emoji.muan.co/) |
