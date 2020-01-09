@@ -122,7 +122,7 @@ Doctype是一种DTD文档定义类型，必须声明在HTML文档的第一行，
 
 ## 说说对两种盒模型的理解
 
-标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin 
+标准盒模型和IE怪异盒模型，标准盒模型下：盒子总宽度/高度=width/height+padding+border+margin
 
 ![](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/box_model01.png)
 

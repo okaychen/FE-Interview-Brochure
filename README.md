@@ -15,6 +15,8 @@
 | [安全篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/security.md) | Q10 | 🤔 已完善 |
 | [算法篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/algorithm.md) | Q5-10 | 😀 已完善 |
 | [构建工具篇](https://github.com/okaychen/FE-Interview-Questions/blob/master/webpack.md) | Q5-10 | 😀 已完善 |
+| [求职准备](https://github.com/okaychen/FE-Interview-Brochure/blob/master/guide.md) | 求职准备 | 🤔 已完善 |
+| [资源合集](https://github.com/okaychen/FE-Interview-Brochure/blob/master/source.md) | 学习资源 | 🤔 已完善 |
 
 > Vue篇以Vue为主的一些框架问题，后面会考虑加上React
 >
@@ -42,7 +44,7 @@ Github阅读：[https://github.com/okaychen/FE-Interview-Brochure](https://githu
 
 那我想下载到本地呢，打开你的git bash：
 
-```
+```text
 git clone https://github.com/okaychen/FE-Interview-Brochure.git
 ```
 
@@ -58,14 +60,11 @@ git clone https://github.com/okaychen/FE-Interview-Brochure.git
 
 我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Questions/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
 
-> 总结不易，希望这本前端面试小册子于我于大家都能受益
-
 ## Change log
 
-- Jan 8  ,  2020
-  - Brochure_v1.0：完成近100+前端高频面试题以及推荐解答，已稳定
-- Jan 10  ,  2020
-  - Brochure_v1.1：添加资源大礼包(简历模板，平台推荐，学习资源等)
+* v1.0  Jan 9  ,  2020  
+  * 完成近100+前端高频面试题以及推荐解答
+  * 添加资源大礼包\(优质博客，平台推荐，学习资源等\)
 
 ## License
 
