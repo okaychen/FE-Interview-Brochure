@@ -58,7 +58,7 @@ git clone https://github.com/okaychen/FE-Interview-Brochure.git
 
 为了让有个性的同学也看到这份前端面试小册，我推出了方案C
 
-我已经发布了release版本：[点击直接下载PDF](https://github.com/okaychen/FE-Interview-Questions/releases/download/v0.0.1/FE-Interview-Brochure_0.0.1.pdf)
+我已经发布了release版本：[v1.0已稳定，点击直接下载PDF](https://github.com/okaychen/FE-Interview-Brochure/releases/download/v1.0/fe-interview-brochure_v1.0.pdf)
 
 ## Change log
 
