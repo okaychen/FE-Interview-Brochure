@@ -60,6 +60,13 @@ git clone https://github.com/okaychen/FE-Interview-Brochure.git
 
 > 总结不易，希望这本前端面试小册子于我于大家都能受益
 
+## Change log
+
+- Jan 8  ,  2020
+  - Brochure_v1.0：完成近100+前端高频面试题以及推荐解答，已稳定
+- Jan 10  ,  2020
+  - Brochure_v1.1：添加资源大礼包(简历模板，平台推荐，学习资源等)
+
 ## License
 
 [MIT](https://github.com/okaychen/FE-Interview-Questions/blob/master/LICENSE)
