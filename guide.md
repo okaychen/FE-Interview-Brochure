@@ -2,7 +2,7 @@
 description: 应届生找一份前端或者互联网其他行业工作我们需要做哪些准备，注意哪些问题
 ---
 
-# 导读
+# 写在后面
 
 ![banner](https://cdn.jsdelivr.net/gh/okaychen/CDN@2.0/brochure/image/tag.jpg)
 
