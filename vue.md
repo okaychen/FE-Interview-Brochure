@@ -1,6 +1,8 @@
-# Vue框架篇
+---
+description: 框架对于应届生也是较重点，除了基础的知识和部分深度问题，还要看对于技术的广度，是否有一个自己完整的技术栈，以及对于自身技术栈的认知程度
+---
 
-框架对于应届生也是较重点，除了基础的知识和部分深度问题，还要看对于技术的广度，是否有一个自己完整的技术栈，以及对于自身技术栈的认知程度
+# Vue框架篇
 
 ## 对MVVM的理解
 
@@ -187,12 +189,12 @@ History interface是浏览器历史记录栈提供的接口，从HTML5开始，H
 
 懒加载简单来说就是延迟加载或按需加载，即在需要的时候的时候进行加载，常用的懒加载方式有三种：即使用vue异步组件 和 ES6中的import，以及webpack的require.ensure\(\)
 
-* vue异步组件 
+* vue异步组件
 
   ```javascript
   // 路由配置，使用vue异步组件
   {
-  	path: '/home',
+      path: '/home',
       name: 'home',
       component: resolve => require(['@/components/home'],resolve)
   }
@@ -211,8 +213,8 @@ History interface是浏览器历史记录栈提供的接口，从HTML5开始，H
 
   ```javascript
   {
-  	path: '/home',
-   	name: 'home',
+      path: '/home',
+      name: 'home',
       component: r => require.ensure([], () => r(require('@/components/home')), 'demo')
   }
   ```

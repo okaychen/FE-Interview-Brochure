@@ -267,21 +267,21 @@ rem平时怎么做的转换：为了方便计算，时常将html的字体大小�
 
 ```css
 .parent {
-      position: relative;
-      width: 600px;
-      height: 600px;
-      margin: auto;
-      border: 1px solid red;
-    }
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid red;
+ }
 
 .child {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -50px 0 0 -50px;
-      width: 100px;
-      height: 100px;
-      border: 1px solid blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
 }
 ```
 
@@ -318,16 +318,16 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
 * `flex`是上面放大，缩小，大小三者的简写，默认为0 1 auto
 * `align-self`允许单个项目有不同于其他的对齐方式
 
-```css
+```markup
 <!--flex实现经典的三栏布局-->
 <style>
 .flex-container{
-        display: flex;
-        height: 200px;
+    display: flex;
+    height: 200px;
 }
 .middle {
-        height: 200px;
-        background-color: yellowgreen;
+    height: 200px;
+    background-color: yellowgreen;
     flex-grow: 1;
 }
 .left,.right {
@@ -335,13 +335,12 @@ flex意为弹性布局，有两大概念，一是容器\(container\)，二是项
     flex: 0 1 200px;
     background-color: green;
 }
-
 </style>
 
 <div class="flex-container">
-        <div class="left">左侧内容</div>
-        <div class="middle">中间内容</div>
-        <div class="right">右侧内容</div>
+    <div class="left">左侧内容</div>
+    <div class="middle">中间内容</div>
+    <div class="right">右侧内容</div>
 </div>
 ```
 

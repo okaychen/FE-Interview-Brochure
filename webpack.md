@@ -1,6 +1,8 @@
-# 构建工具篇
+---
+description: webpack是事实上的前端打包标准，使用较广泛，相比其他打包工具webpack更是面试中的热点
+---
 
-webpack是事实上的前端打包标准，使用较广泛，相比其他打包工具webpack更是面试中的热点
+# 构建工具篇
 
 ## 用的webpack3还是版本4，知道有哪些改进嘛
 
@@ -56,7 +58,7 @@ loader能把源文件经过转化后输出新的结果，一个loader遵循单�
 ```javascript
 // 一个简单的loader例子
 function replace(source) {
-    // 使用正则把 // @require '../style/index.css' 转换成 require('../style/index.css');  
+    // 使用正则把 @require '../style/index.css' 转换成 require('../style/index.css');  
     return source.replace(/(\/\/ *@require) +(('|").+('|")).*/, 'require($2);');
 }
 module.exports = function (content) {
