@@ -192,9 +192,9 @@ History interface是浏览器历史记录栈提供的接口，从HTML5开始，H
   ```javascript
   // 路由配置，使用vue异步组件
   {
-  path: '/home',
-  name: 'home',
-  component: resolve => require(['@/components/home'],resolve)
+  	path: '/home',
+      name: 'home',
+      component: resolve => require(['@/components/home'],resolve)
   }
   ```
 
@@ -211,13 +211,9 @@ History interface是浏览器历史记录栈提供的接口，从HTML5开始，H
 
   ```javascript
   {
-  path: '/home',
-  name: 'home',
-  component: r => require.ensure([], () => r(require('@/components/home')), 'demo')
-  }, {
-  path: '/index',
-  name: 'Index',
-  component: r => require.ensure([], () => r(require('@/components/index')), 'demo')
+  	path: '/home',
+   	name: 'home',
+      component: r => require.ensure([], () => r(require('@/components/home')), 'demo')
   }
   ```
 
