@@ -30,7 +30,7 @@
 | [CNode](https://cnodejs.org/) | [CodePon (在线代码测试工具)](https://codepen.io/) |
 |  | [智图 (图片在线压缩，制作webp)](https://zhitu.isux.us/) |
 |  | [JSRun (在线代码编辑器)](http://jsrun.pro/) |
-| [infoQ)](https://www.infoq.cn/) | [Icomoon (字体图标制作)](https://icomoon.io/) |
+| [infoQ](https://www.infoq.cn/) | [Icomoon (字体图标制作)](https://icomoon.io/) |
 | [segmentfault](https://segmentfault.com/) | [Iconfont (阿里矢量图库)](https://www.iconfont.cn/) |
 | [stackoverflow](https://stackoverflow.com/) | [墨刀 (产品设计)](https://modao.cc/) |
 | [smashingmagazine](https://www.smashingmagazine.com/) | [颜色搭配表](http://rainyin.com/307.html) |
